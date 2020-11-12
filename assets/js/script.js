@@ -1,3 +1,14 @@
+
+// var movie = "Gremlins";
+var queryURL = "https://www.omdbapi.com/?t=Gremlins&apikey=trilogy";
+
+$.ajax({
+  url: queryURL,
+  method: "GET",
+}).then(function (response) {
+  console.log(response);
+});
+
 //$("#find-book").on("click", function(event) {
   //  event.preventDefault();
    var bookTitle = "Arrival";
@@ -9,4 +20,5 @@
         console.log(response);
     })
 //});
+
 
