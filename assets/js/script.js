@@ -19,6 +19,13 @@ $.ajax({
     }).then(function(response) {
         console.log(response);
     })
-//});
+//}); 
 
+    var triviaQueryURL = "https://opentdb.com/api.php?amount=5&category=11&difficulty=medium"
+    $.ajax({
+        url: triviaQueryURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+    })
 
