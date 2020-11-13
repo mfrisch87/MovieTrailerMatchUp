@@ -1,4 +1,4 @@
-document.body.innerHTML = `<h1 id="movieTitle"></h1>
+document.body.innerHTML = `<img id="poster"></img><h1 id="movieTitle"></h1>
 <h1 id="plot"><h1 id="year"><h1 id="rated">
 </h1><h1 id="metacritic"><h1 id="rating"></h1>`
 
@@ -12,13 +12,17 @@ $.ajax({
     
     //Below ID tags are just placeholders. My hope is that we will be able to swap
     //these out with their relevant counterparts on the Front End.
+    var poster = $("#poster").attr("src", response.Poster)
     var movieTitle = $("#movieTitle").text(response.Title)
     var year = $("#year").text(response.Year)
     var plot = $("#plot").text(response.Plot)
     var rated = $("#rated").text(response.Rated)
     var metacritic = $("#metacritic").text(response.Ratings[1].Source)
     var ratings = $("#rating").text(response.Ratings[1].Value)
+
+    // poster.setAttribute("src", response.Title)
     
+    localStorage.setItem("poster", JSON.stringify(response.Poster))
     localStorage.setItem("title", JSON.stringify(response.Title))
     localStorage.setItem("year", JSON.stringify(response.Year))
     localStorage.setItem("plot", JSON.stringify(response.Plot))
@@ -26,7 +30,7 @@ $.ajax({
     localStorage.setItem("metacritic", JSON.stringify(response.Ratings[1].Source))
     localStorage.setItem("rating", JSON.stringify(response.Ratings[1].Value))
     
-    console.log()
+    console.log(response.Poster)
 
 });
 
