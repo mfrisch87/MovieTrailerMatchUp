@@ -9,12 +9,12 @@ $.ajax({
   console.log(response);
 });
 
-//$("#find-book").on("click", function(event) {
+//$("#find-trailer").on("click", function(event) {
   //  event.preventDefault();
-   var bookTitle = "Arrival";
-    var bookQueryURL = "https://www.googleapis.com/books/v1/volumes?q=" + bookTitle + "&key=AIzaSyCkifdAmM0IIjs8znt7RH2_-_6o4xjOPYs"
+   var videoTitle = "Arrival Trailer";
+    var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q=" + videoTitle + "&type=video&chart=mostPopular&key=AIzaSyCkifdAmM0IIjs8znt7RH2_-_6o4xjOPYs"
     $.ajax({
-        url: bookQueryURL,
+        url: videoQueryURL,
         method: "GET"
     }).then(function(response) {
         console.log(response);
