@@ -44,7 +44,6 @@ var searchMovie = function (movie) {
 
 searchMovie("Goonies")
 
-function youtubeTitle(movieTitle)
 
 // Youtube Search to find Trailer
    var videoTitle = movieTitle +  "Official trailer" + year;
