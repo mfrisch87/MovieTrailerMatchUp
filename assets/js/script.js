@@ -4,7 +4,7 @@ document.body.innerHTML = `<img id="poster"></img><h1 id="movieTitle"></h1>
 
 var searchMovie = function (movie) {
     
-    var queryURL = "https://www.omdbapi.com/?s=" + "superman" + "&apikey=trilogy";
+    var queryURL = "https://www.omdbapi.com/?t=" + "superman" + "&apikey=trilogy";
     
     $.ajax({
         url: queryURL,
@@ -30,14 +30,17 @@ var searchMovie = function (movie) {
     localStorage.setItem("year", JSON.stringify(response.Year))
     localStorage.setItem("plot", JSON.stringify(response.Plot))
     localStorage.setItem("rated", JSON.stringify(response.Title))
-    localStorage.setItem("metacritic", JSON.stringify(response.Ratings[1].Source))
+    localStorage.setItem("rottenTomatoes", JSON.stringify(response.Ratings[1].Source))
     localStorage.setItem("rating", JSON.stringify(response.Ratings[1].Value))
     
     var yearOfRelease = response.Year
-
-    for 
     
-});
+    for (i = 0; i < 6; i++){
+        
+    
+    }
+
+    });
 }
 
 searchMovie("Goonies")
