@@ -23,6 +23,8 @@ var searchMovie = function (movie) {
     var rated = $("#rated").text(response.Rated)
     var metacritic = $("#rottenTomatoes").text(response.Ratings[1].Source)
     var ratings = $("#rating").text(response.Ratings[1].Value)
+   
+
     
 
     localStorage.setItem("poster", JSON.stringify(response.Poster))
@@ -42,6 +44,8 @@ var searchMovie = function (movie) {
 
 searchMovie("Goonies")
 
+function youtubeTitle(movieTitle)
+
 // Youtube Search to find Trailer
    var videoTitle = movieTitle +  "Official trailer" + year;
     var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q=" + videoTitle + "&type=video&chart=mostPopular&key=AIzaSyCkifdAmM0IIjs8znt7RH2_-_6o4xjOPYs"
@@ -50,7 +54,8 @@ searchMovie("Goonies")
         method: "GET"
     }).then(function(response) {
       var trailerId = response.items[0].id.videoId;
-  
+      console.log(movieTitle.value);
+        console.log(videoTitle);
         console.log(response);
         console.log(trailerId);
         
