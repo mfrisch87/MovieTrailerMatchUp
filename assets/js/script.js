@@ -11,9 +11,11 @@ var searchMovie = function (movie) {
         method: "GET",
     }).then(function (response) {
         console.log(response);
-    
-    //Below ID tags are just placeholders. My hope is that we will be able to swap
+        
+        //Below ID tags are just placeholders. My hope is that we will be able to swap
     //these out with their relevant counterparts on the Front End.
+    
+    
     var poster = $("#poster").attr("src", response.Poster)
     var movieTitle = $("#movieTitle").text(response.Title)
     var year = $("#year").text(response.Year)
@@ -22,6 +24,7 @@ var searchMovie = function (movie) {
     var metacritic = $("#metacritic").text(response.Ratings[1].Source)
     var ratings = $("#rating").text(response.Ratings[1].Value)
     
+
     localStorage.setItem("poster", JSON.stringify(response.Poster))
     localStorage.setItem("title", JSON.stringify(response.Title))
     localStorage.setItem("year", JSON.stringify(response.Year))
@@ -30,11 +33,13 @@ var searchMovie = function (movie) {
     localStorage.setItem("metacritic", JSON.stringify(response.Ratings[1].Source))
     localStorage.setItem("rating", JSON.stringify(response.Ratings[1].Value))
     
-    });
+    var yearOfRelease = response.Year
+    
+    
+});
 }
 
 searchMovie("Goonies")
-
 
 //$("#find-book").on("click", function(event) {
   //  event.preventDefault();
