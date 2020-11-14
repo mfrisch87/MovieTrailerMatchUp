@@ -35,9 +35,9 @@ var searchMovie = function (movie) {
     
     var yearOfRelease = response.Year
 
-    for 
+  
     
-});
+          });
 }
 
 searchMovie("Goonies")
