@@ -11,7 +11,7 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
   />
-  <link>
+  <link rel="stylesheet" href="assets/css/style.css"> 
 </head>
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,21 +21,16 @@
       <script src="assets\js\script.js"></script>
 
 <div class="container"><!--main container-->
-  
-
-  <section class="hero is-primary mx-2" ><!--banner -->
+  <!--START OF BANNER-->
+  <section class="hero  bg-image" >
     <div class="hero-body">
-      <div class="container">
-        <h1 class="title title is-1 pb-6">
-          Movies Trailers
+      <div class="container has-text-centered">
+        <h1 class="title title is-1 pb-6 has-text-white has-text-weight-bold">
+          Movie Trailers
         </h1>
-      </div>
 
-
-      <nav class="level">
-        <!-- Left side -->
-        <div class="level-left">
-          <div class="level-item">
+        <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand field has-addons">
             <div class="field has-addons">
               <p class="control">
                 <input class="input is-rounded " type="text" placeholder=" Search Movie">
@@ -46,29 +41,77 @@
                 </button>
               </p>
             </div>
+        
+            <a role="button" class="navbar-burger burger burger-bg " aria-label="menu" aria-expanded="false" data-target="navbarToggle">
+              <i class="fas fa-bars fa-fw fa-2x "></i>
+            </a>
           </div>
-        </div>
+        
+          <div id="navbarToggle" class="navbar-menu nav-color">
+            <div class="navbar-end nav-color">
+              <a class="button is-small is-rounded navbar-item has-text-black ">
+                Superman
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
       
-        <!-- Right side -->
-        <div class="level-right">
-          <p class="level-item"><a class="button is-small has-text-primary is-rounded">Movie Name</a></p>
-        </div>
-      </nav>
     </div>
+    
   </section>
+  <!--END OF BANNER-->
 
-  <div class="columns">
-    <!--add id to parent movie -->
-    <div class="column is-full">
-        <section class="section">
-          <div class="container">
-            <h1 class="title" >Title Of Book</h1>
-            <h2 class="subtitle">
-              A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-            </h2>
-          </div>
-        </section>
+    <!--SECTION WERE MOVIE INFO IS GOING TO BE DISPLAYED-->
+    <section id="firstblock" class="section columns">
+      <section class="column is-one-fourth-desktop is-one-fourth-desktop image">
+        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <p id="title-and-year" class="text-is">Superman 1998</p>
+      </section>  
+      <section class="column is-one-fourth-desktop image">
+        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+      </section>
+      <section class="column is-one-fourth-desktop image">
+        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+      </section>  
+      <section class="column is-one-fourth-desktop image">
+        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+      </section>      
+    </section>
+    <section id="firstblock" class="section columns">
+      <section class="column is-one-fourth-desktop image">
+        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+      </section>  
+      <section class="column is-one-fourth-desktop image">
+        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+      </section>
+      <section class="column is-one-fourth-desktop image">
+        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+      </section>  
+      <section class="column is-one-fourth-desktop image">
+        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+      </section>      
+    </section>
+  </div>
+
+<!--MODEL TO APPEND YOUTUBE VIDEO-->
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-4by3" id="appendVideo">
+        <iframe class="has-ratio" width="100%" height="535" src="https://www.youtube.com/embed/78N2SP6JFaI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
     </div>
-</div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!--ADDING SCRIPT LINK TO HTML-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/toggle.js"></script>
 </body>
 </html>
