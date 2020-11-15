@@ -6,9 +6,7 @@ var parentButtonEl = $("#parent-button")
 
 searchMovie()
 function searchMovie() {
-
     // e.preventDefault()
-
     // var movie = $("#search").val().toLowerCase()
     
     var queryURL = "https://www.omdbapi.com/?s=" + "superman" + "&apikey=trilogy";
@@ -19,15 +17,12 @@ function searchMovie() {
     }).then(function (response) {
         console.log(response);
         
-        //Below ID tags are just placeholders. My hope is that we will be able to swap
-    //these out with their relevant counterparts on the Front End.
     var movieCollection = [];
     
     for (i = 0; i < 5; i++){
     
     movieCollection[i] = response.Search[i];
     
-    console.log(movieCollection[i])
 }
 
 parentButtonEl.innerHTML =
@@ -42,7 +37,9 @@ parentButtonEl.innerHTML =
 <p class="level-item">
 <button class="button is-small has-text-primary is-rounded" data-index="4">${movieCollection[4].Title}</button></p>`
     
-localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
+localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))//How do we parse the imdbID out of this?
+
+
 
     // var poster = response.Poster
     // var movieTitle = response.Title
@@ -52,7 +49,6 @@ localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
     // var rottenTomatoes = response.Ratings[1].Source
     // var ratings = response.Ratings[1].Value
     
-    console.log(movieTitle, poster, year, plot, rated, rottenTomatoes, ratings)
 
     // localStorage.setItem("title", JSON.stringify(response.Title))
     // localStorage.setItem("year", JSON.stringify(response.Year))
