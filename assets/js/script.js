@@ -2,7 +2,7 @@
 // <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
 // <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
 
-var posterDisplayEl = $("#poster-display")
+var posterDisplayEl = $("#firstblock")
 
 searchMovie()
 function searchMovie() {
@@ -19,24 +19,44 @@ function searchMovie() {
         
     var movieCollection = [];
     
+    function displayPosters (movieCollection) {
     for (i = 0; i < 8; i++){
     
-    movieCollection[i] = response.Search[i];
+    movieCollection[i] = response.Search[i];// What is this?
     console.log(movieCollection[i].Poster)
+    
+    var posterSection = 
+    $("<section>")
+    .addClass("section columns is-mobile is-multiline")
+    .addID("firstblock")
+
+    var posterImage =
+    $("<img>")
+    .addClass("has-ration")
+    .addID("posterBtn")
+    .attr("src", movieCollection[i].Poster)
+
+    posterSection
+    .append(posterImage)
+
+    posterDisplayEl
+    .append(posterSection)
     }
+}
     displayPosters(movieCollection);
     console.log(movieCollection)
+    
+    
+
 });
 }
-function displayPosters (movieCollection) {
+
 //corrected ID spelling below to "firstBlock" rather than "firstblock"
 console.log(movieCollection)
-posterDisplayEl.innerHTML =
-`<section id="firstBlock" class="section columns"><section class="column is-one-fourth-desktop is-one-fourth-desktop image"><img class="has-ratio" src="${movieCollection[0].Poster}"><p id="title-and-year" class="text-is">Superman 1998</p></section><section class="column is-one-fourth-desktop image"><img class="has-ratio" src="${movieCollection[1].Poster}"></section><section class="column is-one-fourth-desktop image"><img class="has-ratio" src="${movieCollection[2].Poster}"></section><section class="column is-one-fourth-desktop image"><img class="has-ratio" src="${movieCollection[3].Poster}"></section></section><section id="secondBlock" class="section columns"><section class="column is-one-fourth-desktop image"><img class="has-ratio" src="${movieCollection[4].Poster}"></section><section class="column is-one-fourth-desktop image"><img class="has-ratio" src="${movieCollection[5].Poster}"></section><section class="column is-one-fourth-desktop image"><img class="has-ratio" src="${movieCollection[6].Poster}"></section><section class="column is-one-fourth-desktop image"><img class="has-ratio" src="${movieCollection[7].Poster}"></section></section>`
 
+displayPosters(movieCollection[0])
 localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))//How do we parse the imdbID out of this?
 
-}
 
     // var poster = response.Poster
     // var movieTitle = response.Title
@@ -121,7 +141,5 @@ localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))//H
 // function stopVideo() {
 //   player.stopVideo();
 // }
-
-
 $("#search").on("click", searchMovie)
 //});
