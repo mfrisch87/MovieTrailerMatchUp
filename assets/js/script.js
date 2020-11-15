@@ -2,7 +2,7 @@
 // <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
 // <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
 
-var posterDisplayEl = $("#firstblock")
+var posterDisplayEl = $("#first")
  
 function displayPosters (movieCollection) {
     for (i = 0; i < 8; i++){
@@ -34,7 +34,7 @@ function searchMovie() {
     // e.preventDefault()
     // var movie = $("#search").val().toLowerCase()
     
-    var queryURL = "https://www.omdbapi.com/?s=superman&apikey=trilogy";
+    var queryURL = "https://www.omdbapi.com/?s=batman&apikey=trilogy";
     
     $.ajax({
         url: queryURL,
