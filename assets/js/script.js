@@ -19,7 +19,7 @@ function searchMovie() {
         
     var movieCollection = [];
     
-    for (i = 0; i < 5; i++){
+    for (i = 0; i < 8; i++){
     
     movieCollection[i] = response.Search[i];
     
@@ -36,7 +36,7 @@ parentButtonEl.innerHTML =
 <button class="button is-small has-text-primary is-rounded" data-index="3">${movieCollection[3].Title}</button></p>
 <p class="level-item">
 <button class="button is-small has-text-primary is-rounded" data-index="4">${movieCollection[4].Title}</button></p>`
-    
+
 localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))//How do we parse the imdbID out of this?
 
 
