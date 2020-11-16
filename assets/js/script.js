@@ -1,8 +1,13 @@
-document.body.innerHTML = `<img id="poster"></img><h1 id="movieTitle"></h1>
-<h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
-<h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
+// document.body.innerHTML = `<img id="poster"></img><h1 id="movieTitle"></h1>
+// <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
+// <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
 
-var searchMovie = function (movie) {
+var parentButtonEl = $("#parent-button")
+
+searchMovie()
+function searchMovie() {
+    // e.preventDefault()
+    // var movie = $("#search").val().toLowerCase()
     
     var queryURL = "https://www.omdbapi.com/?s=" + "superman" + "&apikey=trilogy";
     
@@ -12,34 +17,53 @@ var searchMovie = function (movie) {
     }).then(function (response) {
         console.log(response);
         
-        //Below ID tags are just placeholders. My hope is that we will be able to swap
-    //these out with their relevant counterparts on the Front End.
+    var movieCollection = [];
     
+    for (i = 0; i < 8; i++){
     
-    var poster = $("#poster").attr("src", response.Poster)
-    var movieTitle = $("#movieTitle").text(response.Title)
-    var year = $("#year").text(response.Year)
-    var plot = $("#plot").text(response.Plot)
-    var rated = $("#rated").text(response.Rated)
-    var metacritic = $("#rottenTomatoes").text(response.Ratings[1].Source)
-    var ratings = $("#rating").text(response.Ratings[1].Value)
-   
+    movieCollection[i] = response.Search[i];
+    
+}
 
+parentButtonEl.innerHTML =
+`<p class="level-item">
+<button class="button is-small has-text-primary is-rounded" data-index="0">${movieCollection[0].Title}</button></p>
+<p class="level-item">
+<button class="button is-small has-text-primary is-rounded" data-index="1">${movieCollection[1].Title}</button></p>
+<p class="level-item">
+<button class="button is-small has-text-primary is-rounded" data-index="2">${movieCollection[2].Title}</button></p>
+<p class="level-item">
+<button class="button is-small has-text-primary is-rounded" data-index="3">${movieCollection[3].Title}</button></p>
+<p class="level-item">
+<button class="button is-small has-text-primary is-rounded" data-index="4">${movieCollection[4].Title}</button></p>`
+
+localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))//How do we parse the imdbID out of this?
+
+
+
+    // var poster = response.Poster
+    // var movieTitle = response.Title
+    // var year = response.Year
+    // var plot = response.Plot
+    // var rated = response.Rated
+    // var rottenTomatoes = response.Ratings[1].Source
+    // var ratings = response.Ratings[1].Value
     
 
-    localStorage.setItem("poster", JSON.stringify(response.Poster))
-    localStorage.setItem("title", JSON.stringify(response.Title))
-    localStorage.setItem("year", JSON.stringify(response.Year))
-    localStorage.setItem("plot", JSON.stringify(response.Plot))
-    localStorage.setItem("rated", JSON.stringify(response.Title))
-    localStorage.setItem("metacritic", JSON.stringify(response.Ratings[1].Source))
-    localStorage.setItem("rating", JSON.stringify(response.Ratings[1].Value))
+    // localStorage.setItem("title", JSON.stringify(response.Title))
+    // localStorage.setItem("year", JSON.stringify(response.Year))
+    // localStorage.setItem("plot", JSON.stringify(response.Plot))
+    // localStorage.setItem("rated", JSON.stringify(response.Title))
+    // localStorage.setItem("rottenTomatoes", JSON.stringify(response.Ratings[1].Source))
+    // localStorage.setItem("rating", JSON.stringify(response.Ratings[1].Value))
     
     var yearOfRelease = response.Year
-
-  
     
-          });
+    
+
+    
+
+    });
 }
 
 searchMovie("Goonies")
@@ -102,4 +126,7 @@ function onPlayerStateChange(event) {
 function stopVideo() {
   player.stopVideo();
 }
+
+
+$("#search").on("click", searchMovie)
 //});

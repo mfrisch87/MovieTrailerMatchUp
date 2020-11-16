@@ -11,74 +11,97 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
   />
-  <link>
+  <link rel="stylesheet" href="assets/css/style.css"> 
 </head>
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
-
- 
-      <script src="assets\js\script.js"></script>
-
 <div class="container"><!--main container-->
-  
-
-  <section class="hero is-primary mx-2" ><!--banner -->
+  <!--START OF BANNER-->
+  <section class="hero  bg-image" >
     <div class="hero-body">
-      <div class="container">
-        <h1 class="title title is-1 pb-6">
-          Movies Trailers
+      <div class="container has-text-centered">
+        <h1 class="title title is-1 pb-6 has-text-white has-text-weight-bold">
+          Movie Trailers
         </h1>
-      </div>
 
-
-      <nav class="level">
-        <!-- Left side -->
-        <div class="level-left">
-          <div class="level-item">
+        <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand field has-addons">
             <div class="field has-addons">
+              
               <p class="control">
+                <!--ADD ID TO BUTTON-->
                 <input class="input is-rounded " type="text" placeholder=" Search Movie">
               </p>
-              <p class="control">
+              <p class="control"><!--ADD ID TO P TO  BE USED A EVENT DELEGATION-->
                 <button class="button is-rounded">
                   <i class="fas fa-search"></i>
                 </button>
               </p>
             </div>
+        
+            <a role="button" class="navbar-burger burger burger-bg " aria-label="menu" aria-expanded="false" data-target="navbarToggle">
+              <i class="fas fa-bars fa-fw fa-2x "></i>
+            </a>
           </div>
-        </div>
-      
-        <!-- Right side -->
-        <div class="level-right">
-          <p class="level-item"><a class="button is-small has-text-primary is-rounded">Movie Name</a></p>
-        </div>
-      </nav>
-    </div>
-  </section>
-
-  <div class="columns">
-    <!--add id to parent movie -->
-    <div class="column is-full">
-        <section class="section">
-          <div class="container">
-            <h1 class="title" >Title Of Book</h1>
-            <h2 class="subtitle">
-              A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-            </h2>
-          </div>
-        </section>
-    </div>
-    <!--add youtube video -->
-    <div class="column is-half-desktop">
-      
-      <div class="column is-full">
-          <section class="section">
-            <div class="container">
-              <iframe id = "video" width="100%" height="100%" src="https://www.youtube.com/embed/T6DJcgm3wNY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+        
+          <div id="navbarToggle" class="navbar-menu nav-color">
+            <div class="navbar-end nav-color"><!--ADD DESCRIPTIVE ID TO DIV TO APPEND EACH TITLE AS BUTTONS-->
+              <a class="button is-small is-rounded navbar-item has-text-black ">
+                Superman
+              </a>
             </div>
-          </section>
+          </div>
+        </nav>
       </div>
+      
+    </div>
+    
+  </section>
+  <!--END OF BANNER-->
+
+    <!--SECTION WERE MOVIE POSTER IS GOING TO BE DISPLAYED-->
+    <section id="firstblock" class="section columns is-mobile is-multiline">
+      <section class="column is-half-mobile is-one-quarter-tablet">
+        <img class="has-ratio" src="https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
+      </section>  
+      <section class="column is-half-mobile is-one-quarter-tablet">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg">
+      </section>  
+      <section class="column is-half-mobile is-one-quarter-tablet">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg">
+      </section>  
+      <section class="column is-half-mobile is-one-quarter-tablet">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMWUzNDJjMDUtNGEzMi00YThlLTlkMmEtNjVlOGQwOWM3MjM3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg">
+      </section>     
+      <section class="column is-half-mobile is-one-quarter-tablet">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMzI3ZDllMTctNmI2Mi00OGQ4LTk2ZTQtYTJhMjA5ZGI2YmRkXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg">
+      </section>  
+      <section class="column is-half-mobile is-one-quarter-tablet">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMmIwZWY1YTYtNDlhOS00NDRmLWI4MzItNjk2NDc1N2NhYzNlXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg">
+      </section>  
+      <section class="column is-half-mobile is-one-quarter-tablet">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMjk3ODhmNjgtZjllOC00ZWZjLTkwYzQtNzc1Y2ZhMjY2ODE0XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg">
+      </section>  
+      <section class="column is-half-mobile is-one-quarter-tablet">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BZDc5NTFiMzgtZWJiOS00N2M1LWJmOGYtZmNjMzFhMzcxZjRiXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg">
+      </section> 
+    </section>
   </div>
+
+<!--MODEL TO APPEND YOUTUBE VIDEO-->
+  <div class="modal"><!--add descriptive id to modal-->
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image" id="appendVideo">
+        <iframe width="100%" height="75%" src="https://www.youtube.com/embed/KmDMh9ci_h0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close">Close</button>
+  </div>
+
+  <!--ADDING SCRIPT LINK TO HTML-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/toggle.js"></script>
 </body>
 </html>
