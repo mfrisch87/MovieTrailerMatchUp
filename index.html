@@ -14,12 +14,6 @@
   <link rel="stylesheet" href="assets/css/style.css"> 
 </head>
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
-
- 
-      <script src="assets\js\script.js"></script>
-
 <div class="container"><!--main container-->
   <!--START OF BANNER-->
   <section class="hero  bg-image" >
@@ -32,10 +26,12 @@
         <nav class="navbar is-light" role="navigation" aria-label="main navigation">
           <div class="navbar-brand field has-addons">
             <div class="field has-addons">
+              
               <p class="control">
+                <!--ADD ID TO BUTTON-->
                 <input class="input is-rounded " type="text" placeholder=" Search Movie">
               </p>
-              <p class="control">
+              <p class="control"><!--ADD ID TO P TO  BE USED A EVENT DELEGATION-->
                 <button class="button is-rounded">
                   <i class="fas fa-search"></i>
                 </button>
@@ -48,8 +44,7 @@
           </div>
         
           <div id="navbarToggle" class="navbar-menu nav-color">
-            <div class="navbar-end nav-color">
-              
+            <div class="navbar-end nav-color"><!--ADD DESCRIPTIVE ID TO DIV TO APPEND EACH TITLE AS BUTTONS-->
               <a class="button is-small is-rounded navbar-item has-text-black ">
                 Superman
               </a>
@@ -63,52 +58,49 @@
   </section>
   <!--END OF BANNER-->
 
-    <!--SECTION WERE MOVIE INFO IS GOING TO BE DISPLAYED-->
+    <!--SECTION WERE MOVIE POSTER IS GOING TO BE DISPLAYED-->
     <section id="firstblock" class="section columns is-mobile is-multiline">
       <section class="column is-half-mobile is-one-quarter-tablet">
-        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <img class="has-ratio" src="https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
       </section>  
       <section class="column is-half-mobile is-one-quarter-tablet">
-        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg">
       </section>  
       <section class="column is-half-mobile is-one-quarter-tablet">
-        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg">
       </section>  
       <section class="column is-half-mobile is-one-quarter-tablet">
-        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMWUzNDJjMDUtNGEzMi00YThlLTlkMmEtNjVlOGQwOWM3MjM3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg">
       </section>     
       <section class="column is-half-mobile is-one-quarter-tablet">
-        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMzI3ZDllMTctNmI2Mi00OGQ4LTk2ZTQtYTJhMjA5ZGI2YmRkXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg">
       </section>  
       <section class="column is-half-mobile is-one-quarter-tablet">
-        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMmIwZWY1YTYtNDlhOS00NDRmLWI4MzItNjk2NDc1N2NhYzNlXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg">
       </section>  
       <section class="column is-half-mobile is-one-quarter-tablet">
-        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BMjk3ODhmNjgtZjllOC00ZWZjLTkwYzQtNzc1Y2ZhMjY2ODE0XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg">
       </section>  
       <section class="column is-half-mobile is-one-quarter-tablet">
-        <img class="has-ratio" src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg%40._V1_SX300.jpg">
+        <img class="has-ratio" src=" https://m.media-amazon.com/images/M/MV5BZDc5NTFiMzgtZWJiOS00N2M1LWJmOGYtZmNjMzFhMzcxZjRiXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg">
       </section> 
     </section>
   </div>
 
 <!--MODEL TO APPEND YOUTUBE VIDEO-->
-  <div class="modal">
+  <div class="modal"><!--add descriptive id to modal-->
     <div class="modal-background"></div>
     <div class="modal-content">
-      <p class="image is-4by3" id="appendVideo">
-        <iframe class="has-ratio" width="100%" height="535" src="https://www.youtube.com/embed/78N2SP6JFaI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p class="image" id="appendVideo">
+        <iframe width="100%" height="75%" src="https://www.youtube.com/embed/KmDMh9ci_h0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </p>
     </div>
-    <button class="modal-close is-large" aria-label="close"></button>
+    <button class="modal-close is-large" aria-label="close">Close</button>
   </div>
 
   <!--ADDING SCRIPT LINK TO HTML-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/toggle.js"></script>
 </body>
