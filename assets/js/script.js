@@ -2,39 +2,46 @@
 // <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
 // <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
 
-var posterDisplayEl = $("#first")
+var posterInput = $("#")
+
+var posterDisplayEl = $("#firstblock");
  
 function displayPosters (movieCollection) {
+    posterDisplayEl.empty()
+
     for (i = 0; i < 8; i++){
     
-        console.log(movieCollection[i].Poster)
+        // console.log(movieCollection[i].Poster)
     // movieCollection[i] = response.Search[i];// What is this?
     // console.log(movieCollection[i].Poster)
     
     var posterSection = 
     $("<section>")
     .addClass("section columns is-mobile is-multiline")
-    .addID("firstblock")
+    .data("title", movieCollection[i].Title);
 
     var posterImage =
     $("<img>")
     .addClass("has-ration")
-    .addID("posterBtn")
-    .attr("src", movieCollection[i].Poster)
+    .attr("src", movieCollection[i].Poster);
 
     posterSection
-    .append(posterImage)
+    .append(posterImage);
+    
+    posterDisplayEl
+    .append(posterSection);
 
 }
-posterDisplayEl
-.append(posterSection)
+
 }
+
+
 searchMovie()
 function searchMovie() {
     // e.preventDefault()
     // var movie = $("#search").val().toLowerCase()
     
-    var queryURL = "https://www.omdbapi.com/?s=batman&apikey=trilogy";
+    var queryURL = "https://www.omdbapi.com/?s=" +  + "&apikey=trilogy";
     
     $.ajax({
         url: queryURL,
@@ -47,12 +54,12 @@ function searchMovie() {
     for (i = 0; i < 8; i++){
     
         movieCollection[i] = response.Search[i];// What is this?
-        console.log(movieCollection[i].Poster)
+        // console.log(movieCollection[i].Poster)
         }
 
    
     displayPosters(movieCollection);
-    console.log(movieCollection)
+    // console.log(movieCollection)
     
     
 
@@ -61,7 +68,7 @@ function searchMovie() {
 
 //corrected ID spelling below to "firstBlock" rather than "firstblock"
 
-// localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))//How do we parse the imdbID out of this?
+localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
 
 
     // var poster = response.Poster
@@ -147,5 +154,9 @@ function searchMovie() {
 // function stopVideo() {
 //   player.stopVideo();
 // }
+
+//after data is disp
+
+// displayPosterEl.on("click", "data-title", getYouTube)
 $("#search").on("click", searchMovie)
 //});
