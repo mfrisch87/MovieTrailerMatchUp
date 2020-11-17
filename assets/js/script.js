@@ -104,7 +104,7 @@
     
 
 
-searchMovie("Goonies")
+//searchMovie("Goonies")
 
 // // Youtube Search to find Trailer
 function trailerSearch (movie, year) {
@@ -164,7 +164,7 @@ function stopVideo() {
   player.stopVideo();
 }
 
-after data is disp
+
 
 // displayPosterEl.on("click", "data-title", getYouTube)
 //});
