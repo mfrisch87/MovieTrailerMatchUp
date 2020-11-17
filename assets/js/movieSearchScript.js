@@ -37,7 +37,25 @@ function displayPosters (movieCollection) {
 
 function movieOptionClick(e){
     e.preventDefault()
-    var movie = $(this).val().toLowerCase()
+    var movie = $(this)
+    .parent()
+    .sibling()
+    .eq(0)
+    .children()
+    .eq(0)
+    .val()
+    .toLowerCase()
+    searchMovie(movie)
+    console.log(this)
+
+}
+
+//
+function movieOptionSubmit(e){
+    e.preventDefault()
+    var movie = $(this)
+    .val()
+    .toLowerCase()
     searchMovie(movie)
     console.log(this)
 
@@ -101,8 +119,9 @@ function searchMovie(movie) {
     
 //     var yearOfRelease = response.Year
     
-    $("#search").on("click", searchMovie)
-
+    $("#search-input").on("submit", movieOptionSubmit)
+    $("#search-button").on("click", movieOptionClick)
+    
 
     
 
