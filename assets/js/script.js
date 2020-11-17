@@ -22,8 +22,12 @@ $('#appendVideo').attr("src", youTubeURL);
 function activateModal(e) {
 
   e.preventDefault();
+  console.log('hit')
+  console.log(e.target)
   var movie = $(this).data('title').toLowerCase();
+
   trailerSearch(movie);
+  //$('model-div')
 }
 
-$('firstblock').on("click", "data-title", activateModal)
+$('#firstblock').on("click", "[data-title]", activateModal)
