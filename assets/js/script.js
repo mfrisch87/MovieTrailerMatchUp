@@ -11,7 +11,7 @@ function displayPosters (movieCollection) {
 
     for (i = 0; i < 8; i++){
     
-        // console.log(movieCollection[i].Poster)
+    // console.log(movieCollection[i].Poster)
     // movieCollection[i] = response.Search[i];// What is this?
     // console.log(movieCollection[i].Poster)
     
@@ -30,18 +30,26 @@ function displayPosters (movieCollection) {
     
     posterDisplayEl
     .append(posterSection);
-
 }
 
 }
 
+function movieOptionClick(e){
+    e.preventDefault()
+    var movie = $(this).val().toLowerCase()
+    searchMovie(movie)
+    // console.log(this)
 
-searchMovie()
-function searchMovie() {
-    // e.preventDefault()
-    // var movie = $("#search").val().toLowerCase()
+}
+
+//create a clickevent function for every past searched movie. This is for the history button.bg-image
+        //inside I'm going to get the value of the btn send it to lowercase then call searchMovie("pass value")
+        // function movieHistory(e) / var movie = $(this).val().toLowerCase() /searchMovie(movie)
+
+function searchMovie(movie) {
     
-    var queryURL = "https://www.omdbapi.com/?s=" +  + "&apikey=trilogy";
+    
+    var queryURL = "https://www.omdbapi.com/?s=" + movie + "&apikey=trilogy";
     
     $.ajax({
         url: queryURL,
@@ -71,23 +79,23 @@ function searchMovie() {
 localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
 
 
-    // var poster = response.Poster
-    // var movieTitle = response.Title
-    // var year = response.Year
-    // var plot = response.Plot
-    // var rated = response.Rated
-    // var rottenTomatoes = response.Ratings[1].Source
-    // var ratings = response.Ratings[1].Value
+//     var poster = response.Poster
+//     var movieTitle = response.Title
+//     var year = response.Year
+//     var plot = response.Plot
+//     var rated = response.Rated
+//     var rottenTomatoes = response.Ratings[1].Source
+//     var ratings = response.Ratings[1].Value
     
 
-    // localStorage.setItem("title", JSON.stringify(response.Title))
-    // localStorage.setItem("year", JSON.stringify(response.Year))
-    // localStorage.setItem("plot", JSON.stringify(response.Plot))
-    // localStorage.setItem("rated", JSON.stringify(response.Title))
-    // localStorage.setItem("rottenTomatoes", JSON.stringify(response.Ratings[1].Source))
-    // localStorage.setItem("rating", JSON.stringify(response.Ratings[1].Value))
+//     localStorage.setItem("title", JSON.stringify(response.Title))
+//     localStorage.setItem("year", JSON.stringify(response.Year))
+//     localStorage.setItem("plot", JSON.stringify(response.Plot))
+//     localStorage.setItem("rated", JSON.stringify(response.Title))
+//     localStorage.setItem("rottenTomatoes", JSON.stringify(response.Ratings[1].Source))
+//     localStorage.setItem("rating", JSON.stringify(response.Ratings[1].Value))
     
-    // var yearOfRelease = response.Year
+//     var yearOfRelease = response.Year
     
     
 
@@ -121,7 +129,7 @@ localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
 //       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
-  //  This function creates an <iframe> (and YouTube player)
+//    This function creates an <iframe> (and YouTube player)
 //       //    after the API code downloads.
 //       var player;
 //       function onYouTubeIframeAPIReady() {
@@ -155,7 +163,7 @@ localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
 //   player.stopVideo();
 // }
 
-//after data is disp
+// after data is disp
 
 // displayPosterEl.on("click", "data-title", getYouTube)
 $("#search").on("click", searchMovie)
