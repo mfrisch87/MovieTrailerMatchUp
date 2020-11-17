@@ -16,6 +16,7 @@ var youTubeURL = "https://www.youtube.com/embed/" + trailerId
 
 //Appending URL result to modal
 $('#appendVideo').attr("src", youTubeURL);
+$('#modal-div').addClass('is-active')
   })
 }
 
