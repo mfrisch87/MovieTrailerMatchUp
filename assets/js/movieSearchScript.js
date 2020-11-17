@@ -38,13 +38,18 @@ function movieOptionClick(e){
     e.preventDefault()
     var movie = $(this).val().toLowerCase()
     searchMovie(movie)
-    // console.log(this)
+    console.log(this)
 
 }
 
-//create a clickevent function for every past searched movie. This is for the history button.bg-image
+    //create a clickevent function for every past searched movie. This is for the history button.bg-image
         //inside I'm going to get the value of the btn send it to lowercase then call searchMovie("pass value")
-        // function movieHistory(e) / var movie = $(this).val().toLowerCase() /searchMovie(movie)
+            function movieHistory(e){ 
+            var movie = $(this)
+            .val()
+            .toLowerCase()
+            searchMovie(movie)
+        }
 
 function searchMovie(movie) {
     
@@ -65,6 +70,7 @@ function searchMovie(movie) {
         // console.log(movieCollection[i].Poster)
         }
 
+    localStorage.setItem("movieTitle", JSON.stringify(movie))
    
     displayPosters(movieCollection);
     // console.log(movieCollection)
@@ -76,7 +82,6 @@ function searchMovie(movie) {
 
 //corrected ID spelling below to "firstBlock" rather than "firstblock"
 
-localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
 
 
 //     var poster = response.Poster
