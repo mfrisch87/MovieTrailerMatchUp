@@ -41,7 +41,7 @@ function movieOptionClick(e){
     var movie =
     $(this)
     .parent()
-    .sibling()
+    .siblings()
     .eq(0)
     .children()
     .eq(0)
@@ -62,8 +62,7 @@ function movieOptionSubmit(e){
 }
 
     function movieHistory(e){
-        // e.preventDefault() ? ? ?
-        
+        e.preventDefault() 
         var movie = $(this)
         .val()
         .toLowerCase()
@@ -99,7 +98,7 @@ function searchMovie(movie) {
 //NOTE: correct ID spelling below to "firstBlock" rather than "firstblock in index and JS?"
 
     
-    $("#search-input").on("submit", movieOptionSubmit)
+    $("#search-box").submit( movieOptionSubmit)
     $("#search-button").on("click", movieOptionClick)
     
 
