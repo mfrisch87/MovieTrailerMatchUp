@@ -2,7 +2,7 @@
 // <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
 // <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
 
-var posterInput = $("#")
+// var posterInput = $("#")
 
 var posterDisplayEl = $("#firstblock");
  
@@ -18,8 +18,9 @@ function displayPosters (movieCollection) {
     var posterSection = 
     $("<section>")
     .addClass("section columns is-mobile is-multiline")
-    .data("title", movieCollection[i].Title);
-
+    .data("title", movieCollection[i].Title)
+    .data("year", movieCollection[i].Year);
+    
     var posterImage =
     $("<img>")
     .addClass("has-ration")
@@ -42,14 +43,12 @@ function movieOptionClick(e){
 
 }
 
-    //create a clickevent function for every past searched movie. This is for the history button.bg-image
-        //inside I'm going to get the value of the btn send it to lowercase then call searchMovie("pass value")
-            function movieHistory(e){ 
-            var movie = $(this)
-            .val()
-            .toLowerCase()
-            searchMovie(movie)
-        }
+    function movieHistory(e){ 
+        var movie = $(this)
+        .val()
+        .toLowerCase()
+        searchMovie(movie)
+    }
 
 function searchMovie(movie) {
     
