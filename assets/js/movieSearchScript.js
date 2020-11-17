@@ -23,7 +23,7 @@ function displayPosters (movieCollection) {
     
     var posterImage =
     $("<img>")
-    .addClass("has-ration")
+    .addClass("has-ration style-poster")
     .attr("src", movieCollection[i].Poster);
 
     posterSection
@@ -37,7 +37,9 @@ function displayPosters (movieCollection) {
 
 function movieOptionClick(e){
     e.preventDefault()
-    var movie = $(this)
+    
+    var movie =
+    $(this)
     .parent()
     .sibling()
     .eq(0)
@@ -45,23 +47,23 @@ function movieOptionClick(e){
     .eq(0)
     .val()
     .toLowerCase()
-    searchMovie(movie)
-    console.log(this)
-
+    searchMovie(movie) //what is this doing here ? ? ?
 }
 
 //
 function movieOptionSubmit(e){
     e.preventDefault()
-    var movie = $(this)
+    
+    var movie =
+    $(this)
     .val()
     .toLowerCase()
     searchMovie(movie)
-    console.log(this)
-
 }
 
-    function movieHistory(e){ 
+    function movieHistory(e){
+        // e.preventDefault() ? ? ?
+        
         var movie = $(this)
         .val()
         .toLowerCase()
@@ -87,37 +89,15 @@ function searchMovie(movie) {
         // console.log(movieCollection[i].Poster)
         }
 
-    localStorage.setItem("movieTitle", JSON.stringify(movie))
+        localStorage.setItem("movieTitle", JSON.stringify(movie))
    
-    displayPosters(movieCollection);
-    // console.log(movieCollection)
-    
-    
-
+        displayPosters(movieCollection);
+        // console.log(movieCollection)
     });
 }
 
-//corrected ID spelling below to "firstBlock" rather than "firstblock"
+//NOTE: correct ID spelling below to "firstBlock" rather than "firstblock in index and JS?"
 
-
-
-//     var poster = response.Poster
-//     var movieTitle = response.Title
-//     var year = response.Year
-//     var plot = response.Plot
-//     var rated = response.Rated
-//     var rottenTomatoes = response.Ratings[1].Source
-//     var ratings = response.Ratings[1].Value
-    
-
-//     localStorage.setItem("title", JSON.stringify(response.Title))
-//     localStorage.setItem("year", JSON.stringify(response.Year))
-//     localStorage.setItem("plot", JSON.stringify(response.Plot))
-//     localStorage.setItem("rated", JSON.stringify(response.Title))
-//     localStorage.setItem("rottenTomatoes", JSON.stringify(response.Ratings[1].Source))
-//     localStorage.setItem("rating", JSON.stringify(response.Ratings[1].Value))
-    
-//     var yearOfRelease = response.Year
     
     $("#search-input").on("submit", movieOptionSubmit)
     $("#search-button").on("click", movieOptionClick)
