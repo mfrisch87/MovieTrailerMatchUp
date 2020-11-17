@@ -107,19 +107,20 @@ localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
 // searchMovie("Goonies")
 
 // // Youtube Search to find Trailer
-//    var videoTitle = movieTitle +  "Official trailer" + year;
-//     var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q=" + videoTitle + "&type=video&chart=mostPopular&key=AIzaSyCkifdAmM0IIjs8znt7RH2_-_6o4xjOPYs"
-//     $.ajax({
-//         url: videoQueryURL,
-//         method: "GET"
-//     }).then(function(response) {
-//       var trailerId = response.items[0].id.videoId;
+function trailerSearch (movie, year) {
+var videoTitle = movie +  "Official trailer" + year;
+var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q=" + videoTitle + "&type=video&chart=mostPopular&key=AIzaSyCkifdAmM0IIjs8znt7RH2_-_6o4xjOPYs"
+$.ajax({
+  url: videoQueryURL,
+  method: "GET"
+    }).then(function(response) {
+ var trailerId = response.items[0].id.videoId;
   
-//         console.log(response);
-//         console.log(trailerId);
+ console.log(response);
+ console.log(trailerId);
         
-//     })
-
+  })
+}
 
 // // IFrame API
 // var tag = document.createElement('script');
