@@ -143,12 +143,10 @@ var tag = document.createElement('script');
           }
         });
       }
-
  // The API will call this function when the video player is ready.
  function onPlayerReady(event) {
   event.target.playVideo();
 }
-
 // The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
@@ -167,3 +165,4 @@ after data is disp
 
 // displayPosterEl.on("click", "data-title", getYouTube)
 //});
+
