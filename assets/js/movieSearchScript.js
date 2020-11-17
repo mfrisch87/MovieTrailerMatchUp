@@ -17,17 +17,21 @@ function displayPosters (movieCollection) {
     
     var posterSection = 
     $("<section>")
-    .addClass("section columns is-mobile is-multiline")
-    .data("title", movieCollection[i].Title)
-    .data("year", movieCollection[i].Year);
+    .addClass("column is-half-mobile is-one-quarter-tablet mb-3")
+    .attr("data-title", movieCollection[i].Title);
     
     var posterImage =
     $("<img>")
     .addClass("has-ration style-poster")
     .attr("src", movieCollection[i].Poster);
 
+    var info = $("<h5>").addClass('title is-5').text("Title: "+movieCollection[i].Title);
+    var type = $('<h6>').addClass('subtitle is-6 mb-0').text("Type: " +movieCollection[i].Type);
+    var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year: " +movieCollection[i].Year);
+       
+
     posterSection
-    .append(posterImage);
+    .append(posterImage, info, type, year);
     
     posterDisplayEl
     .append(posterSection);
