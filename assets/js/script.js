@@ -19,11 +19,11 @@ $('#appendVideo').attr("src", youTubeURL);
   })
 }
 
-activateModal(e) {
+function activateModal(e) {
+
   e.preventDefault();
   var movie = $(this).data('title').toLowerCase();
   trailerSearch(movie);
 }
-
 
 $('firstblock').on("click", "data-title", activateModal)
