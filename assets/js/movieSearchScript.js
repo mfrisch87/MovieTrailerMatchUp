@@ -2,7 +2,7 @@
 // <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
 // <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
 
-//var posterInput = $("#")
+// var posterInput = $("#")
 
 var posterDisplayEl = $("#firstblock");
  
@@ -18,11 +18,12 @@ function displayPosters (movieCollection) {
     var posterSection = 
     $("<section>")
     .addClass("section columns is-mobile is-multiline")
-    .data("title", movieCollection[i].Title);
-
+    .data("title", movieCollection[i].Title)
+    .data("year", movieCollection[i].Year);
+    
     var posterImage =
     $("<img>")
-    .addClass("has-ration")
+    .addClass("has-ration style-poster")
     .attr("src", movieCollection[i].Poster);
 
     posterSection
@@ -36,15 +37,38 @@ function displayPosters (movieCollection) {
 
 function movieOptionClick(e){
     e.preventDefault()
-    var movie = $(this).val().toLowerCase()
-    searchMovie(movie)
-    // console.log(this)
-
+    
+    var movie =
+    $(this)
+    .parent()
+    .sibling()
+    .eq(0)
+    .children()
+    .eq(0)
+    .val()
+    .toLowerCase()
+    searchMovie(movie) //what is this doing here ? ? ?
 }
 
-//create a clickevent function for every past searched movie. This is for the history button.bg-image
-        //inside I'm going to get the value of the btn send it to lowercase then call searchMovie("pass value")
-        // function movieHistory(e) / var movie = $(this).val().toLowerCase() /searchMovie(movie)
+//
+function movieOptionSubmit(e){
+    e.preventDefault()
+    
+    var movie =
+    $(this)
+    .val()
+    .toLowerCase()
+    searchMovie(movie)
+}
+
+    function movieHistory(e){
+        // e.preventDefault() ? ? ?
+        
+        var movie = $(this)
+        .val()
+        .toLowerCase()
+        searchMovie(movie)
+    }
 
 function searchMovie(movie) {
     
@@ -65,24 +89,19 @@ function searchMovie(movie) {
         // console.log(movieCollection[i].Poster)
         }
 
+        localStorage.setItem("movieTitle", JSON.stringify(movie))
    
-    displayPosters(movieCollection);
-    // console.log(movieCollection)
-    
-    
-
+        displayPosters(movieCollection);
+        // console.log(movieCollection)
     });
 }
 
-//corrected ID spelling below to "firstBlock" rather than "firstblock"
-
-//localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
-
-
+//NOTE: correct ID spelling below to "firstBlock" rather than "firstblock in index and JS?"
 
     
-    $("#search").on("click", searchMovie)
-
+    $("#search-input").on("submit", movieOptionSubmit)
+    $("#search-button").on("click", movieOptionClick)
+    
 
     
 
