@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // document.body.innerHTML = `<img id="poster"></img><h1 id="movieTitle"></h1>
 // <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
 // <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
@@ -164,7 +165,34 @@
 // }
 
 // after data is disp
+=======
+// Query Search of Youtube for Movie Trailer
+function trailerSearch (movie) {
+var videoTitle = movie + " Official Trailer ";
+var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q="+ videoTitle +"&type=video&chart=mostPopular&key=AIzaSyDgv-l3BTAuJoboL7mU6jt28CQlD2XaE64"
+console.log(videoQueryURL);
+$.ajax({
+  url: videoQueryURL,
+  method: "GET"
+    }).then(function(response) {
+ var trailerId = response.items[0].id.videoId;
+  
+ console.log(response);
+ console.log(trailerId);
+        // Youtube URL based on response
+var youTubeURL = "https://www.youtube.com/embed/" + trailerId
 
-// displayPosterEl.on("click", "data-title", getYouTube)
-//});
+//Appending URL result to modal
+$('#appendVideo').attr("src", youTubeURL);
+  })
+}
 
+function activateModal(e) {
+>>>>>>> bf795735977e1c2467d5bfdb10f1b0fd3851599a
+
+  e.preventDefault();
+  var movie = $(this).data('title').toLowerCase();
+  trailerSearch(movie);
+}
+
+$('firstblock').on("click", "data-title", activateModal)

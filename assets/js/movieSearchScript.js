@@ -2,7 +2,11 @@
 // <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
 // <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
 
+<<<<<<< HEAD
 // var posterInput = $("#")
+=======
+//var posterInput = $("#")
+>>>>>>> bf795735977e1c2467d5bfdb10f1b0fd3851599a
 
 var posterDisplayEl = $("#firstblock");
  
