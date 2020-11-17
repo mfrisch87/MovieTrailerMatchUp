@@ -2,81 +2,81 @@
 // <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
 // <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
 
-var posterInput = $("#")
+// var posterInput = $("#")
 
-var posterDisplayEl = $("#firstblock");
+// var posterDisplayEl = $("#firstblock");
  
-function displayPosters (movieCollection) {
-    posterDisplayEl.empty()
+// function displayPosters (movieCollection) {
+//     posterDisplayEl.empty()
 
-    for (i = 0; i < 8; i++){
+//     for (i = 0; i < 8; i++){
     
     // console.log(movieCollection[i].Poster)
     // movieCollection[i] = response.Search[i];// What is this?
     // console.log(movieCollection[i].Poster)
     
-    var posterSection = 
-    $("<section>")
-    .addClass("section columns is-mobile is-multiline")
-    .data("title", movieCollection[i].Title);
+//     var posterSection = 
+//     $("<section>")
+//     .addClass("section columns is-mobile is-multiline")
+//     .data("title", movieCollection[i].Title);
 
-    var posterImage =
-    $("<img>")
-    .addClass("has-ration")
-    .attr("src", movieCollection[i].Poster);
+//     var posterImage =
+//     $("<img>")
+//     .addClass("has-ration")
+//     .attr("src", movieCollection[i].Poster);
 
-    posterSection
-    .append(posterImage);
+//     posterSection
+//     .append(posterImage);
     
-    posterDisplayEl
-    .append(posterSection);
-}
+//     posterDisplayEl
+//     .append(posterSection);
+// }
 
-}
+// }
 
-function movieOptionClick(e){
-    e.preventDefault()
-    var movie = $(this).val().toLowerCase()
-    searchMovie(movie)
+// function movieOptionClick(e){
+//     e.preventDefault()
+//     var movie = $(this).val().toLowerCase()
+//     searchMovie(movie)
     // console.log(this)
 
-}
+// }
 
 //create a clickevent function for every past searched movie. This is for the history button.bg-image
         //inside I'm going to get the value of the btn send it to lowercase then call searchMovie("pass value")
         // function movieHistory(e) / var movie = $(this).val().toLowerCase() /searchMovie(movie)
 
-function searchMovie(movie) {
+// function searchMovie(movie) {
     
     
-    var queryURL = "https://www.omdbapi.com/?s=" + movie + "&apikey=trilogy";
+//     var queryURL = "https://www.omdbapi.com/?s=" + movie + "&apikey=trilogy";
     
-    $.ajax({
-        url: queryURL,
-        method: "GET",
-    }).then(function (response) {
-        console.log(response);
+//     $.ajax({
+//         url: queryURL,
+//         method: "GET",
+//     }).then(function (response) {
+//         console.log(response);
         
-    var movieCollection = [];
+//     var movieCollection = [];
     
-    for (i = 0; i < 8; i++){
+//     for (i = 0; i < 8; i++){
     
-        movieCollection[i] = response.Search[i];// What is this?
+//         movieCollection[i] = response.Search[i];// What is this?
         // console.log(movieCollection[i].Poster)
-        }
+        // }
 
    
-    displayPosters(movieCollection);
+    // displayPosters(movieCollection);
     // console.log(movieCollection)
     
     
 
-    });
-}
+//     });
+// }
 
 //corrected ID spelling below to "firstBlock" rather than "firstblock"
 
-localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
+// localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
 
 
 //     var poster = response.Poster
@@ -104,7 +104,7 @@ localStorage.setItem("movieCollectionArray", JSON.stringify(movieCollection))
     
 
 
-// searchMovie("Goonies")
+searchMovie("Goonies")
 
 // // Youtube Search to find Trailer
 function trailerSearch (movie, year) {
@@ -150,22 +150,21 @@ $.ajax({
 //   event.target.playVideo();
 // }
 
-// // The API calls this function when the player's state changes.
-// //    The function indicates that when playing a video (state=1),
-// //    the player should play for six seconds and then stop.
-// var done = false;
-// function onPlayerStateChange(event) {
-//   if (event.data == YT.PlayerState.PLAYING && !done) {
-//     setTimeout(stopVideo, 6000);
-//     done = true;
-//   }
-// }
-// function stopVideo() {
-//   player.stopVideo();
-// }
+// The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
+  }
+}
+function stopVideo() {
+  player.stopVideo();
+}
 
-// after data is disp
+after data is disp
 
 // displayPosterEl.on("click", "data-title", getYouTube)
-$("#search").on("click", searchMovie)
 //});
