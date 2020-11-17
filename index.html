@@ -29,10 +29,10 @@
           
               <p class="control">
                 <!--ADD ID TO BUTTON-->
-                <input class="input is-rounded " type="text" placeholder=" Search Movie">
+                <input id = "search-input"class="input is-rounded " type="text" placeholder=" Search Movie"><!--`search-input`-->
               </p>
               <p class="control"><!--ADD ID TO P TO  BE USED A EVENT DELEGATION-->
-                <button class="button is-rounded">
+                <button id ="search-button"class="button is-rounded"><!--`search-button`-->
                   <i class="fas fa-search"></i>
                 </button>
               </p>
@@ -43,7 +43,7 @@
           </a>
             </div>
             <div id="navbarToggle" class="navbar-menu nav-color">
-              <div class="navbar-end nav-color"><!--ADD DESCRIPTIVE ID TO DIV TO APPEND EACH TITLE AS BUTTONS-->
+              <div id="append-title-button"class="navbar-end nav-color"><!--ADD DESCRIPTIVE ID TO DIV TO APPEND EACH TITLE AS BUTTONS-->
                 <a class="button is-small is-rounded navbar-item has-text-black ">
                     Superman
                   </a>
@@ -87,14 +87,14 @@
   </div>
 
 <!--MODEL TO APPEND YOUTUBE VIDEO-->
-  <div class="modal"><!--add descriptive id to modal-->
+  <div id="modal-div"class="modal"><!--add descriptive id to modal-->
     <div class="modal-background"></div>
     <div class="modal-content">
       <p class="image" id="appendVideo">
         <iframe width="100%" height="75%" src="https://www.youtube.com/embed/KmDMh9ci_h0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </p>
     </div>
-    <button class="modal-close is-large" aria-label="close">Close</button>
+    <button id="button-close"class="modal-close is-large" aria-label="close">Close</button>
   </div>
 
   <!--ADDING SCRIPT LINK TO HTML-->
