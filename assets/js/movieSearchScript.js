@@ -18,11 +18,11 @@ function displayPosters (movieCollection) {
     var posterSection = 
     $("<section>")
     .addClass("column is-half-mobile is-one-quarter-tablet mb-3")
-    .attr("data-title", movieCollection[i].Title);
+    .attr("data-title", movieCollection[i].Title + " " + movieCollection[i].Year);
     
     var posterImage =
     $("<img>")
-    .addClass("has-ration style-poster")
+    .addClass("has-ration style-poster is-clickable")
     .attr("src", movieCollection[i].Poster);
 
     var info = $("<h5>").addClass('title is-5').text("Title: "+movieCollection[i].Title);
