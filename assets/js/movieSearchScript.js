@@ -51,7 +51,7 @@ function movieOptionClick(e){
     .eq(0)
     .val()
     .toLowerCase()
-    searchMovie(movie) //what is this doing here ? ? ?
+    searchMovie(movie) //what is this doing here ?
 }
 
 //
