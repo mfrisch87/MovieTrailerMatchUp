@@ -37,6 +37,13 @@ function activateModal(e) {
 //   e.preventDefault();
 //   console.log(e.target);
 // }
+function hideModal(e){
+  e.preventDefault()
+  $("#modal-div").removeClass("is-active");
+  $("#appendVideo").attr('src', '');
+}
 
+
+$("#button-close").on("click", hideModal)
 $('#firstblock').on("click", "[data-title]", activateModal)
 //$('body', '#button-close').on("click",  deactivateModal)
