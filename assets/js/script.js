@@ -36,8 +36,8 @@ function activateModal(e) {
 // }
 function hideModal(e){
   e.preventDefault()
-
-  $("#modal-div").modal("hide");
+  $("#modal-div").removeClass("is-active");
+  $("#appendVideo").attr('src', '');
 }
 
 
