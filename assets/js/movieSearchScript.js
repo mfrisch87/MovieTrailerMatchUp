@@ -17,17 +17,21 @@ function displayPosters (movieCollection) {
     
     var posterSection = 
     $("<section>")
-    .addClass("section columns is-mobile is-multiline")
-    .data("title", movieCollection[i].Title)
-    .data("year", movieCollection[i].Year);
+    .addClass("column is-half-mobile is-one-quarter-tablet mb-3")
+    .attr("data-title", movieCollection[i].Title + " " + movieCollection[i].Year);
     
     var posterImage =
     $("<img>")
-    .addClass("has-ration style-poster")
+    .addClass("has-ration style-poster is-clickable")
     .attr("src", movieCollection[i].Poster);
 
+    var info = $("<h5>").addClass('title is-5').text("Title: "+movieCollection[i].Title);
+    var type = $('<h6>').addClass('subtitle is-6 mb-0').text("Type: " +movieCollection[i].Type);
+    var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year: " +movieCollection[i].Year);
+       
+
     posterSection
-    .append(posterImage);
+    .append(posterImage, info, type, year);
     
     posterDisplayEl
     .append(posterSection);
@@ -41,7 +45,7 @@ function movieOptionClick(e){
     var movie =
     $(this)
     .parent()
-    .sibling()
+    .siblings()
     .eq(0)
     .children()
     .eq(0)
@@ -62,8 +66,7 @@ function movieOptionSubmit(e){
 }
 
     function movieHistory(e){
-        // e.preventDefault() ?
-        
+        e.preventDefault() 
         var movie = $(this)
         .val()
         .toLowerCase()
@@ -99,7 +102,7 @@ function searchMovie(movie) {
 //NOTE: correct ID spelling below to "firstBlock" rather than "firstblock in index and JS?"
 
     
-    $("#search-input").on("submit", movieOptionSubmit)
+    $("#search-box").submit( movieOptionSubmit)
     $("#search-button").on("click", movieOptionClick)
     
 
