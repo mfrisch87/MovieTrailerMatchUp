@@ -47,7 +47,7 @@ function movieOptionClick(e){
     .eq(0)
     .val()
     .toLowerCase()
-    searchMovie(movie) //what is this doing here ? ? ?
+    searchMovie(movie) //what is this doing here ?
 }
 
 //
@@ -62,7 +62,7 @@ function movieOptionSubmit(e){
 }
 
     function movieHistory(e){
-        // e.preventDefault() ? ? ?
+        // e.preventDefault() ?
         
         var movie = $(this)
         .val()
