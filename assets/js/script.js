@@ -1,7 +1,7 @@
 // Query Search of Youtube for Movie Trailer
 function trailerSearch (movie) {
 var videoTitle = movie + " Official Trailer ";
-var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q="+ videoTitle +"&type=video&chart=mostPopular&key=AIzaSyDgv-l3BTAuJoboL7mU6jt28CQlD2XaE64"
+var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q="+ videoTitle +"&type=video&chart=mostPopular&key=AIzaSyAg2pgaj4to8E_XV8x1Icu_THjtxNCMTM0"
 console.log(videoQueryURL);
 $.ajax({
   url: videoQueryURL,
