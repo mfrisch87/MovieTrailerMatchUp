@@ -52,5 +52,11 @@ Deployed application URL: https://mfrisch87.github.io/Project1-Group12/
 
 Github repository URL: https://github.com/mfrisch87/Project1-Group12
 
+## LICENSE
+
+Licensed under the [BSD License](LICENSE)
+
+
+
 
 
