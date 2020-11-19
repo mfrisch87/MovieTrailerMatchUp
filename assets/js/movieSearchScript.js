@@ -1,19 +1,9 @@
-// document.body.innerHTML = `<img id="poster"></img><h1 id="movieTitle"></h1>
-// <h1 id="plot"></h1><h1 id="year"></h1><h1 id="rated"></h1>
-// <h1 id="rottenTomatoes"></h1><h1 id="rating"></h1>`
-
-// var posterInput = $("#")
-
 var posterDisplayEl = $("#firstblock");
  
 function displayPosters (movieCollection) {
     posterDisplayEl.empty()
 
     for (i = 0; i < 8; i++){
-    
-    // console.log(movieCollection[i].Poster)
-    // movieCollection[i] = response.Search[i];// What is this?
-    // console.log(movieCollection[i].Poster)
     
     var posterSection = 
     $("<section>")
@@ -92,7 +82,7 @@ function searchMovie(movie) {
         url: queryURL,
         method: "GET",
     }).then(function (response) {
-        console.log(response);
+    console.log(response);
         
     var movieCollection = [];
     
@@ -105,16 +95,12 @@ function searchMovie(movie) {
         localStorage.setItem("movieTitle", JSON.stringify(movie))
    
         displayPosters(movieCollection);
-        // console.log(movieCollection)
     });
 }
 
-//NOTE: correct ID spelling below to "firstBlock" rather than "firstblock in index and JS?"
-
-    
-    $("#search-box").submit( movieOptionSubmit)
-    $("#search-button").on("click", movieOptionClick)
-    $("#append-history").on("click","#append-history-child", movieHistory)
+$("#search-box").submit( movieOptionSubmit)
+$("#search-button").on("click", movieOptionClick)
+$("#append-history").on("click","#append-history-child", movieHistory)
     
 
     
