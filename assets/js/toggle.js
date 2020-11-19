@@ -5,8 +5,3 @@ $(document).ready(function(){
     })
 })
 
-
-//add year to data-title
-//add two notification
-    //one to indicate search fail
-    //one 
