@@ -4,11 +4,13 @@ var ytAPIKeys = [
   'AIzaSyDeTVXmZHeduetXTmG4T4jTkkot-ioAbV4',
   'AIzaSyB-WiR-JT5QTEr2GzOkib58IDNpdF37HdA',
   'AIzaSyBse8dtbY4ZCzX5LrgLJSq-aHl4pNYDeH8',
-  'AIzaSyD4Tthiiwiyiz44GjXJOC4bdi0GkMYGF-U'
+  'AIzaSyD4Tthiiwiyiz44GjXJOC4bdi0GkMYGF-U',
+  'AIzaSyABwvhTHaQmSTCnVCnByAw0PQbvQGUOT-M'
 ]
 
 // Query Search of Youtube for Movie Trailer
 function trailerSearch (movie) {
+  // Use a random key out of the array to avoid hitting quota max
   var randomAPIKey = ytAPIKeys[Math.floor(Math.random() * ytAPIKeys.length)];
   console.log(randomAPIKey);
 var videoTitle = movie + " Official Trailer ";
