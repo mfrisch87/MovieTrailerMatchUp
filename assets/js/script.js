@@ -9,7 +9,7 @@ var ytAPIKeys = [
 
 // Query Search of Youtube for Movie Trailer
 function trailerSearch (movie) {
-  var randomAPIKey = ytAPIKeys[(Math.random() * ytAPIKeys.length)];
+  var randomAPIKey = ytAPIKeys[Math.floor(Math.random() * ytAPIKeys.length)];
   console.log(randomAPIKey);
 var videoTitle = movie + " Official Trailer ";
 var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q="+ videoTitle +"&type=video&chart=mostPopular&key=" + randomAPIKey
