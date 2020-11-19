@@ -67,9 +67,12 @@ function movieOptionSubmit(e){
 
     function movieHistory(e){
         e.preventDefault() 
+        console.log($(this).children().text());
         var movie = $(this)
-        .val()
-        .toLowerCase()
+        .children()
+        .text()
+        .toLowerCase();
+        console.log(movie);
         searchMovie(movie)
     }
 
@@ -104,6 +107,7 @@ function searchMovie(movie) {
     
     $("#search-box").submit( movieOptionSubmit)
     $("#search-button").on("click", movieOptionClick)
+    $("#append-history").on("click","#append-history-child", movieHistory)
     
 
     
