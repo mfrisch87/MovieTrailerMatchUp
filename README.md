@@ -10,8 +10,8 @@ Behind Movie Trailer MatchUp™ is a plucky team of young developers connected b
 
 ## User Story
 
-AS A person interested in movies  
-I WANT TO be able to easily access trailers and information related to my favorite movies as   well as movies that I have never seen  
+AS A person interested in movies<br>
+I WANT TO be able to easily access trailers and information related to my favorite movies as   well as movies that I have never seen<br>  
 SO THAT I can discover new films and learn more about the things I love.
 
 ## Installation
@@ -23,7 +23,7 @@ When the webpage opens enter a movie title into the prominent search bar in the 
 
 ## Mock-up
 
-![Desktop & Mobile](assets\images\Synthesized.jpg)
+![Desktop & Mobile](https://github.com/mfrisch87/Project1-Group12/blob/120172005982aef0bf83ccddd1dcf7422fea59f3/assets%2Fimages%2FSynthesized.jpg)
 
 ## API Reference
 
@@ -39,17 +39,17 @@ We have gone to great lengths to ensure that anyone and everyone with an interes
 Team Leader:  
 -Daniel Soledad  
 
-Front-end:  
+Front-end:<br>
 -Rachel Vallejos  
 -Akarin Jantachotivongs  
 
-Back-end:  
+Back-end:<br>
 -Michael Frisch  
 -Keenan Reed  
 
 ## LICENSE
 
-Licensed under the [BSD License](assets\LICENSE)
+Licensed under the [BSD License](https://github.com/mfrisch87/Project1-Group12/blob/c6695896b12a6384c0ef34db53a0b6b9441496b8/assets%2FLICENSE)
 
 ## URLs
 
