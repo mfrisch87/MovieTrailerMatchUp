@@ -53,6 +53,6 @@ Licensed under the [BSD License](https://github.com/mfrisch87/Project1-Group12/b
 
 ## URLs
 
-Github repository URL: https://github.com/mfrisch87/Project1-Group12 
+Github repository URL: https://github.com/mfrisch87/MovieTrailerMatchUp
 
-Deployed application URL: https://mfrisch87.github.io/Project1-Group12/  
+Deployed application URL: https://mfrisch87.github.io/MovieTrailerMatchUp/
