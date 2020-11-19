@@ -39,9 +39,13 @@ function activateModal(e) {
   var movie = $(this).data('title').toLowerCase();
 
   trailerSearch(movie);
-  //$('model-div')
+}
+function hideModal(e){
+  e.preventDefault()
+  $("#modal-div").removeClass("is-active");
+  $("#appendVideo").attr('src', '');
 }
 
 
 $('#firstblock').on("click", "[data-title]", activateModal)
-//$('body', '#button-close').on("click",  deactivateModal)
+$("#button-close").on("click", hideModal)
