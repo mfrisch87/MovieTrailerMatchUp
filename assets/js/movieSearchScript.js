@@ -16,7 +16,7 @@ function searchMovie(movie) {
         return;
     }
     var movieCollection = [];
-    
+    console.log(response);
 
     //The variable loops 8 times through search results and stores them in movieCollection array.
     for (var i = 0; i < 8; i++){
