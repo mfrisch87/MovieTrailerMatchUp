@@ -23,7 +23,7 @@ When the webpage opens enter a movie title into the prominent search bar in the 
 
 ## Mock-up
 
-![Desktop & Mobile](https://github.com/mfrisch87/Project1-Group12/blob/f50b6c395f1511472fe10a50346cada9b059a77d/assets%2Fimages%2FSynthesize.jpg)
+![Desktop & Mobile](https://github.com/mfrisch87/Project1-Group12/blob/7f5f08ee7d7329bd69cf0529b39fcca475199c8c/assets%2Fimages%2FSynthesize.jpg)
 
 ## API Reference
 
