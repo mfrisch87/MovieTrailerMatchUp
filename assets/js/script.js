@@ -44,6 +44,7 @@ function activateModal(e) {
 }
 function hideModal(e){
   e.preventDefault()
+  e.stopPropagation();
   $("#modal-div").removeClass("is-active");
   $("#appendVideo").attr('src', '');
 }
@@ -51,3 +52,4 @@ function hideModal(e){
 
 $('#firstblock').on("click", "[data-title]", activateModal)
 $("#button-close").on("click", hideModal)
+$("#modal-div").on("click", hideModal)
