@@ -111,20 +111,19 @@ function setToLocal(movie){
     localStorage.setItem("movieTitle", JSON.stringify(arrayOfmovies))
 }
 function displayHistoryButtons(){
+    $("#append-history").empty();
     var arrayOfmovies = [];
     if(JSON.parse(localStorage.getItem('movieTitle')) !==null){
         arrayOfmovies = JSON.parse(localStorage.getItem('movieTitle'))
     }
-
+    console.log(arrayOfmovies)
 
     var parentDiv = $("#append-history");
     
     for(i = 0;i < arrayOfmovies.length; i++){
-        var childDiv = $("<div>")
-        .addClass("dropdown-item is-clickable")
-        .addId("append-history-child");
+        var childDiv = $("<div>").addClass("dropdown-item is-clickable").attr("id","append-history-child");
 
-        var p = $("<p>").text(arrayOfmovies[i]);
+        var p = $("<p>").text((arrayOfmovies[i]).toUpperCase());
 
         childDiv.append(p);
         parentDiv.append(childDiv);
