@@ -1,5 +1,11 @@
+
 .bg-image{
     background-image: url("https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+.border-div{
+  border: solid;
+  border-color: rgb(204, 208, 211);
+  border-width: .1px;
 }
 
 .style-poster{
@@ -11,15 +17,3 @@
   justify-content: space-between;
   width: 100%;
 }
-
-@media only screen and (max-width: 624px) {
-  .style-poster{
-    height: 400px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-    .style-poster{
-      height: 300px;
-    }
-  }
