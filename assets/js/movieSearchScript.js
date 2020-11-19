@@ -93,10 +93,43 @@ function searchMovie(movie) {
         // console.log(movieCollection[i].Poster)
         }
 
-        localStorage.setItem("movieTitle", JSON.stringify(movie))
-   
+        setToLocal(movie);
         displayPosters(movieCollection);
+        displayHistoryButtons();
     });
+}
+
+function setToLocal(movie){
+    var arrayOfmovies = [];
+    if(JSON.parse(localStorage.getItem('movieTitle')) !==null){
+        arrayOfmovies = JSON.parse(localStorage.getItem('movieTitle'))
+    }
+    if(arrayOfmovies.includes(movie)){
+        return
+    }
+    arrayOfmovies.push(movie);
+    localStorage.setItem("movieTitle", JSON.stringify(arrayOfmovies))
+}
+function displayHistoryButtons(){
+    var arrayOfmovies = [];
+    if(JSON.parse(localStorage.getItem('movieTitle')) !==null){
+        arrayOfmovies = JSON.parse(localStorage.getItem('movieTitle'))
+    }
+
+
+    var parentDiv = $("#append-history");
+    
+    for(i = 0;i < arrayOfmovies.length; i++){
+        var childDiv = $("<div>")
+        .addClass("dropdown-item is-clickable")
+        .addId("append-history-child");
+
+        var p = $("<p>").text(arrayOfmovies[i]);
+
+        childDiv.append(p);
+        parentDiv.append(childDiv);
+    }
+
 }
 
 $("#search-box").submit( movieOptionSubmit)
