@@ -93,6 +93,7 @@ function movieOptionClick(e){
     .eq(0)
     .val()
     .toLowerCase()
+    .trim()
     
     searchMovie(movie)
 }
@@ -105,6 +106,7 @@ function movieOptionSubmit(e){
     $(this)
     .val()
     .toLowerCase()
+    .trim()  
     
     searchMovie(movie)
 }
