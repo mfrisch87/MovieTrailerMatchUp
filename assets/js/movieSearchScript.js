@@ -23,7 +23,7 @@ function displayPosters (movieCollection) {
     var posterImage =
     $("<img>")
     .addClass("has-ration style-poster is-clickable")
-    .attr("src", movieCollection[i].Poster);
+    .attr("src", pickPoster(movieCollection[i].Poster));
 
     var info = $("<h5>").addClass('title is-5').text("Title: "+movieCollection[i].Title);
     var type = $('<h6>').addClass('subtitle is-6 mb-0').text("Type: " +movieCollection[i].Type);
@@ -37,6 +37,13 @@ function displayPosters (movieCollection) {
     .append(posterSection);
 }
 
+}
+function pickPoster(poster){
+    console.log(poster);
+    if(poster === "N/A"){
+        return "assets/images/NA-Poster.png"
+    }
+    return poster
 }
 
 function movieOptionClick(e){
