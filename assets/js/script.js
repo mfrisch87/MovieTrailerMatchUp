@@ -49,7 +49,17 @@ function hideModal(e){
   $("#appendVideo").attr('src', '');
 }
 
+function activateNotification(){
+  $("#no-result").addClass("is-active")
+}
+function hideNotification(e){
+  e.preventDefault()
+  $("#no-result").removeClass("is-active")
+}
+
 
 $('#firstblock').on("click", "[data-title]", activateModal)
 $("#button-close").on("click", hideModal)
 $("#modal-div").on("click", hideModal)
+$("#hide-notification").on("click", hideNotification)
+

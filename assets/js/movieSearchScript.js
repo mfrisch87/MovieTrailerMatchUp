@@ -38,7 +38,6 @@ function pickPoster(poster){
 
 function movieOptionClick(e){
     e.preventDefault()
-    
     var movie =
     $(this)
     .parent()
@@ -54,7 +53,6 @@ function movieOptionClick(e){
 //
 function movieOptionSubmit(e){
     e.preventDefault()
-    
     var movie =
     $(this)
     .val()
@@ -82,8 +80,11 @@ function searchMovie(movie) {
         url: queryURL,
         method: "GET",
     }).then(function (response) {
-    console.log(response);
-        
+    console.log(response.Response);
+    if(response.Response == "False"){
+        activateNotification();
+        return;
+    }   
     var movieCollection = [];
     
     for (i = 0; i < 8; i++){
