@@ -1,7 +1,1 @@
-$(document).ready(function(){
-    $(".navbar-burger").click(function(){
-        $('#navbarToggle').toggleClass('is-active')
-        $('.navbar-burger').toggleClass('is-active')
-    })
-})
-
+var movieArray = ["spider man", "black panther", "iron man","street fighter", ];
