@@ -7,7 +7,7 @@ function displayPosters (movieCollection) {
     
     var posterSection = 
     $("<section>")
-    .addClass("column is-half-mobile is-one-quarter-tablet mb-3")
+    .addClass("column is-half-mobile is-one-quarter-tablet mb-5")
     .attr("data-title", movieCollection[i].Title + " " + movieCollection[i].Year);
     
     var posterImage =
@@ -15,7 +15,7 @@ function displayPosters (movieCollection) {
     .addClass("has-ration style-poster is-clickable")
     .attr("src", pickPoster(movieCollection[i].Poster));
 
-    var info = $("<h5>").addClass('title is-5').text("Title: "+movieCollection[i].Title);
+    var info = $("<h5>").addClass('title is-6').text("Title: "+movieCollection[i].Title);
     var type = $('<h6>').addClass('subtitle is-6 mb-0').text("Type: " +movieCollection[i].Type);
     var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year: " +movieCollection[i].Year);
        
