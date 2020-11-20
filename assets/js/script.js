@@ -1,17 +1,8 @@
-// Youtube API Key Array
-var ytAPIKeys = [
-  'AIzaSyAg2pgaj4to8E_XV8x1Icu_THjtxNCMTM0',
-  'AIzaSyDeTVXmZHeduetXTmG4T4jTkkot-ioAbV4',
-  'AIzaSyB-WiR-JT5QTEr2GzOkib58IDNpdF37HdA',
-  'AIzaSyBse8dtbY4ZCzX5LrgLJSq-aHl4pNYDeH8',
-  'AIzaSyD4Tthiiwiyiz44GjXJOC4bdi0GkMYGF-U',
-  'AIzaSyABwvhTHaQmSTCnVCnByAw0PQbvQGUOT-M'
-]
-
 // Query Search of Youtube for Movie Trailer
 function trailerSearch (movie) {
   // Use a random key out of the array to avoid hitting quota max
-  var randomAPIKey = ytAPIKeys[Math.floor(Math.random() * ytAPIKeys.length)];
+  var randomAPIKey = getK();
+  console.log(randomAPIKey);
   //console.log(randomAPIKey);
 var videoTitle = movie + " Official Trailer ";
 var videoQueryURL = "https://youtube.googleapis.com/youtube/v3/search?q="+ videoTitle +"&type=video&chart=mostPopular&key=" + randomAPIKey
@@ -31,6 +22,10 @@ var youTubeURL = "https://www.youtube.com/embed/" + trailerId
 $('#appendVideo').attr("src", youTubeURL);
 $('#modal-div').addClass('is-active')
   })
+}
+//function 
+function getK(){
+  return ytAPIKeys.yKeys[Math.floor(Math.random() * ytAPIKeys.yKeys.length)];
 }
 
 //Activate Trailer Modal

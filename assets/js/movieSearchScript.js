@@ -4,7 +4,7 @@ var posterDisplayEl = $("#firstblock");
 // Initiates search
 function searchMovie(movie) {
     
-    var queryURL = "https://www.omdbapi.com/?s=" + movie + "&apikey=trilogy";
+    var queryURL = "https://www.omdbapi.com/?s=" + movie + "&apikey="+ytAPIKeys.mKey;
     
     $.ajax({
         url: queryURL,
