@@ -6,7 +6,7 @@ Movie Trailer MatchUp™
 
 ## Project Description
 
-Behind Movie Trailer MatchUp™ is a plucky team of young developers connected by a deep desire to make finding their favorite movie trailers just a little bit easier. Their application uses creates a hub of sorts where a user is able to access a variety of movies associated with their search query and have instant access to the most relevant movie trailer associated with each.
+Behind Movie Trailer MatchUp™ is a plucky team of young developers connected by a deep desire to make finding their favorite movie trailers just a little bit easier. Their application creates a hub of sorts where a user is able to access a variety of movies associated with their search query and have instant access to the most relevant movie trailer associated with each.
 
 ## User Story
 
@@ -47,9 +47,22 @@ Back-end:<br>
 -Michael Frisch  
 -Keenan Reed  
 
+## TECHNOLOGIES
+
+-HTML   
+-Javascript   
+-CSS   
+-JQuery   
+-Bulma Wireframe   
+
+
+## POWERPOINT PRESENTATION
+
+Visual resources: [Unsplash.com](https://unsplash.com/)
+
 ## LICENSE
 
-Licensed under the [BSD License](https://github.com/mfrisch87/Project1-Group12/blob/c6695896b12a6384c0ef34db53a0b6b9441496b8/assets%2FLICENSE)
+Licensed under the [BSD License.](https://github.com/mfrisch87/Project1-Group12/blob/c6695896b12a6384c0ef34db53a0b6b9441496b8/assets%2FLICENSE)
 
 ## URLs
 
