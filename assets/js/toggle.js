@@ -1,7 +1,7 @@
 
 //API Key Array
 ytAPIKeys ={ 
-    ykeys:[
+    yKeys:[
       'AIzaSyAg2pgaj4to8E_XV8x1Icu_THjtxNCMTM0',
       'AIzaSyDeTVXmZHeduetXTmG4T4jTkkot-ioAbV4',
       'AIzaSyB-WiR-JT5QTEr2GzOkib58IDNpdF37HdA',
