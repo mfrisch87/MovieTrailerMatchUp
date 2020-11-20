@@ -25,7 +25,7 @@ $('#modal-div').addClass('is-active')
 }
 //function 
 function getK(){
-  return ytAPIKeys.yKeys[Math.floor(Math.random() * ytAPIKeys.yKeys.length)];
+  return ytAPIKeys.yKeys;
 }
 
 //Activate Trailer Modal
