@@ -1,5 +1,3 @@
-// Youtube API Key Array
-
 // Query Search of Youtube for Movie Trailer
 function trailerSearch (movie) {
   // Use a random key out of the array to avoid hitting quota max
