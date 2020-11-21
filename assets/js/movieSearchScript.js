@@ -44,7 +44,7 @@ function displayPosters (movieCollection) {
     
     //adding class and attribute to each item in the the movieCollection array
     var posterSection = 
-    $("<section>")
+    $("<div>")
     .addClass("column is-half-mobile is-one-quarter-tablet mb-5")
     .attr("data-title", movieCollection[i].Title + " " + movieCollection[i].Year);
     
