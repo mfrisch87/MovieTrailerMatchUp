@@ -122,7 +122,7 @@ function movieOptionSubmit(e){
         .toLowerCase();
         
         searchMovie(movie)
-        $("#search-box").attr("placeholder", movie.toUpperCase())
+        $("#search-box").attr("placeholder", movie.toUpperCase()).val(movie.toUpperCase())
     }
 
 // setting the movie name from the input area to local storage
