@@ -53,6 +53,7 @@ function activateNotification(){
 }
 function hideNotification(e){
   e.preventDefault()
+  e.stopPropagation();
   $("#no-result").removeClass("is-active")
 }
 
@@ -60,5 +61,6 @@ function hideNotification(e){
 $('#firstblock').on("click", "[data-title]", activateModal)
 $("#button-close").on("click", hideModal)
 $("#modal-div").on("click", hideModal)
+$("#no-result").on("click", hideNotification)
 $("#hide-notification").on("click", hideNotification)
 
