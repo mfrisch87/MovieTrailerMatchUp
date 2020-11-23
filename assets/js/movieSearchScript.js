@@ -100,8 +100,16 @@ function movieOption(e){
         .children()
         .text()
         .toLowerCase();
+        if(movie == "upcoming"){
+            initialPage("upcoming")
+        }
+        else if(movie === "now playing"){
+            initialPage("now_playing")
+        }
+        else{
+            searchMovie(movie)
+        }
         
-        searchMovie(movie)
         $("#search-box").attr("placeholder", movie.toUpperCase()).val(movie.toUpperCase())
     }
 
