@@ -28,7 +28,8 @@ When the webpage opens enter a movie title into the prominent search bar in the 
 ## API References
 
 -YouTube  
--OMDB  
+-OMDB
+-TMDA  
 
 ## SEO
 
