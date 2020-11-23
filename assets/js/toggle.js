@@ -24,7 +24,7 @@ function initialPage() {
         for (var i = 0; i < response.results.length; i++){
         
             movieCollection[i] ={ Title:response.results[i].title,
-                                  Year:response.results[i].release_date,
+                                  Year:formatedDate(response.results[i].release_date),
                                   Poster:"https://image.tmdb.org/t/p/w220_and_h330_face/"+response.results[i].poster_path,
                                   Type:"Movie",  
             }// What is this?
@@ -38,6 +38,10 @@ function initialPage() {
     });
 }
 
+function formatedDate(date){
+    var array = date.split("-");
+    return  array[1] +"/"+array[2] +"/"+ array[0]
+}
 initialPage();
 
 
