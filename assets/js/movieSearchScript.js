@@ -82,7 +82,6 @@ function pickPoster(poster){
 
 function movieOption(e){
     e.preventDefault()
-
     var movie =
     $("#search-box")
     .val()
