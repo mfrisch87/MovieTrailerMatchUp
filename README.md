@@ -44,7 +44,7 @@ Front-end:<br>
 -[Akarin Jantachotivongs](https://github.com/AkarinJ)  
 
 Back-end:<br>
--[Michael Frisch](https://github.com/mfrisch87) 
+-[Michael Frisch](https://github.com/mfrisch87)<br> 
 -[Keenan Reed](https://github.com/AstralGnome)  
 
 ## TECHNOLOGIES
