@@ -80,33 +80,14 @@ function pickPoster(poster){
 }
 
 
-function movieOptionClick(e){
+function movieOption(e){
     e.preventDefault()
-    
-    //traversing the dom
+
     var movie =
-    $(this)
-    .parent()
-    .siblings()
-    .eq(0)
-    .children()
-    .eq(0)
+    $("#search-box")
     .val()
     .toLowerCase()
     .trim()
-    
-    searchMovie(movie)
-}
-
-
-function movieOptionSubmit(e){
-    e.preventDefault()
-    
-    var movie =
-    $(this)
-    .val()
-    .toLowerCase()
-    .trim()  
     
     searchMovie(movie)
 }
@@ -171,8 +152,8 @@ function displayHistoryButtons(){
 
 }
 
-$("#search-box").submit( movieOptionSubmit)
-$("#search-button").on("click", movieOptionClick)
+$("#search-box").submit( movieOption)
+$("#search-button").on("click", movieOption)
 $("#append-history").on("click","#append-history-child", movieHistory)
 displayHistoryButtons();
 
