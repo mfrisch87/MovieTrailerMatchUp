@@ -37,15 +37,15 @@ We have gone to great lengths to ensure that anyone and everyone with an interes
 ## CREDITS
 
 Team Leader:  
--Daniel Soledad  
+-Daniel Soledad[Daniel Soledad](https://github.com/Tuzosdaniel12)
 
 Front-end:<br>
--Rachel Vallejos  
--Akarin Jantachotivongs  
+-Rachel Vallejos[Rachel Vallejos](https://github.com/rachelvallejos)  
+-Akarin Jantachotivongs[Akarin Jantachotivongs](https://github.com/AkarinJ)  
 
 Back-end:<br>
--Michael Frisch  
--Keenan Reed  
+-Michael Frisch[Michael Frisch](https://github.com/mfrisch87) 
+-Keenan Reed[Keenan Reed](https://github.com/AstralGnome)  
 
 ## TECHNOLOGIES
 
