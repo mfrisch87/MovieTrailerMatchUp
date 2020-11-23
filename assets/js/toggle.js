@@ -9,9 +9,9 @@ ytAPIKeys ={
 }
 
 
-function initialPage() {
+function initialPage(typeSearch) {
     
-    var queryURL = "https://api.themoviedb.org/3/movie/upcoming?api_key=" +ytAPIKeys.uKey+"&language=en-US&page=1&region=US";
+    var queryURL = "https://api.themoviedb.org/3/movie/"+typeSearch+"?api_key=" +ytAPIKeys.uKey+"&language=en-US&page=1&region=US";
     
     $.ajax({
         url: queryURL,
@@ -30,10 +30,12 @@ function initialPage() {
             }// What is this?
             console.log(movieCollection[i].Year)
             }
-    
+            
         //*passing movieCollection data into displayPosters function*
+        setToLocal("upcoming")
+        setToLocal("now playing")
         displayPosters(movieCollection);
-        // displayHistoryButtons();
+        displayHistoryButtons();
 
     });
 }
@@ -42,6 +44,6 @@ function formatedDate(date){
     var array = date.split("-");
     return  array[1] +"/"+array[2] +"/"+ array[0]
 }
-initialPage();
+initialPage("upcoming");
 
 
