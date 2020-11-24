@@ -57,9 +57,16 @@ function displayPosters (movieCollection) {
 
     var info = $("<h5>").addClass('title is-6').text("Title: "+movieCollection[i].Title);
     var type = $('<h6>').addClass('subtitle is-6 mb-0').text("Type: " +movieCollection[i].Type);
-    var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year: " +movieCollection[i].Year);
-       
-        //Appending posterImage html to posterSection HTML and adding the three variables that define info type and year
+    console.log(movieCollection[i].releaseDate)
+
+    if(movieCollection[i].releaseDate === undefined){
+        console.log(movieCollection[i].Year)
+        var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year: " +movieCollection[i].Year);
+    }
+    else{
+        var year = $('<h6>').addClass('subtitle is-6 mb-0').text(movieCollection[i].releaseDate);
+    }
+    //Appending posterImage html to posterSection HTML and adding the three variables that define info type and year
     posterSection
     .append(posterImage, info, type, year);
     
