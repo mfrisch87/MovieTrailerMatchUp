@@ -40,6 +40,14 @@ function displayPosters (movieCollection) {
     posterDisplayEl.empty()
 
     for (var i = 0; i < movieCollection.length; i++){
+        //learned how to do this after project was done
+        // var posterSection = 
+        // `<div class="column is-half-mobile is-one-quarter-tablet mb-3" data-title="${movieCollection[i].Title}${movieCollection[i].Year}">
+        //     <img class="has-ratio style-poster is-clickable" src="${pickPoster(movieCollection[i].Poster)}">
+        //     <h5 class="title is-6">Title: ${movieCollection[i].Title}</h5>
+        //     <h6 class="subtitle is-6 mb-0">Type:${movieCollection[i].Type}</h6>
+        //     <h6 class="subtitle is-6 mb-0">${getYear(movieCollection[i].releaseDate, movieCollection[i].Year )}</h6>  
+        // </div>`
     
     //adding class and attribute to each item in the the movieCollection array
     var posterSection = 
@@ -53,19 +61,10 @@ function displayPosters (movieCollection) {
     .addClass("has-ration style-poster is-clickable")
     .attr("src", pickPoster(movieCollection[i].Poster));
 
-
-
     var info = $("<h5>").addClass('title is-6').text("Title: "+movieCollection[i].Title);
     var type = $('<h6>').addClass('subtitle is-6 mb-0').text("Type: " +movieCollection[i].Type);
-    console.log(movieCollection[i].releaseDate)
+    var year = $('<h6>').addClass('subtitle is-6 mb-0').text(getYear(movieCollection[i].releaseDate, movieCollection[i].Year));
 
-    if(movieCollection[i].releaseDate === undefined){
-        console.log(movieCollection[i].Year)
-        var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year: " +movieCollection[i].Year);
-    }
-    else{
-        var year = $('<h6>').addClass('subtitle is-6 mb-0').text(movieCollection[i].releaseDate);
-    }
     //Appending posterImage html to posterSection HTML and adding the three variables that define info type and year
     posterSection
     .append(posterImage, info, type, year);
@@ -74,6 +73,14 @@ function displayPosters (movieCollection) {
     .append(posterSection);
 }
 
+}
+function getYear(release, year){
+    if(release === undefined){
+        return `Year:  ${year}`;
+    }
+    else{
+        return release;
+    }
 }
 
 // posts unavailable poster when no movie poster is available
