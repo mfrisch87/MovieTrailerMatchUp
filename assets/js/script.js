@@ -15,7 +15,7 @@ $.ajax({
   
  //console.log(response);
  //console.log(trailerId);
-        // Youtube URL based on response
+// Youtube URL based on response
 var youTubeURL = "https://www.youtube.com/embed/" + trailerId
 
 //Appending URL result to modal
@@ -33,8 +33,9 @@ function activateModal(e) {
 
   e.preventDefault();
   console.log('hit')
-  console.log(e.target)
+  
   var movie = $(this).data('title').toLowerCase();
+  console.log(movie)
 
   trailerSearch(movie);
 }

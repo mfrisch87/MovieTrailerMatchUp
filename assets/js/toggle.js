@@ -2,13 +2,13 @@
 //API Key Array
 ytAPIKeys ={ 
     yKeys:
-    "AIzaSyCkifdAmM0IIjs8znt7RH2_-_6o4xjOPYs"
+    "AIzaSyADtyGp19GrSaE4roaX6YHv_BTfM8YsfCI"
     ,
     mKey:'c2e8eb3c',
     uKey: 'a1dac165e8856d66a0687c69f3b83557'
 }
 
-
+//this gives you updates movies but youtube won't match the trailer for some 
 function initialPage(typeSearch) {
     
     var queryURL = "https://api.themoviedb.org/3/movie/"+typeSearch+"?api_key=" +ytAPIKeys.uKey+"&language=en-US&page=1&region=US";
@@ -22,28 +22,21 @@ function initialPage(typeSearch) {
     
         //The variable loops 8 times through search results and stores them in movieCollection array.
         for (var i = 0; i < response.results.length; i++){
-        
             movieCollection[i] ={ Title:response.results[i].title,
                                   Year:formatedDate(response.results[i].release_date),
                                   Poster:"https://image.tmdb.org/t/p/w220_and_h330_face/"+response.results[i].poster_path,
                                   Type:"Movie",  
-            }// What is this?
+            }
             console.log(movieCollection[i].Year)
             }
-            
-        //*passing movieCollection data into displayPosters function*
-        setToLocal("upcoming")
-        setToLocal("now playing")
         displayPosters(movieCollection);
-        displayHistoryButtons();
-
     });
 }
 
 function formatedDate(date){
     var array = date.split("-");
-    return  array[1] +"/"+array[2] +"/"+ array[0]
+    return  array[0]
 }
-initialPage("upcoming");
+
 
 

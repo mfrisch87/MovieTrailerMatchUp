@@ -20,8 +20,7 @@ function searchMovie(movie) {
 
     //The variable loops 8 times through search results and stores them in movieCollection array.
     for (var i = 0; i < 8; i++){
-    
-        movieCollection[i] = response.Search[i];// What is this?
+        movieCollection[i] = response.Search[i];
         }
 
         //setting successful search results into local storage and displaying posters and populating history.
@@ -107,9 +106,8 @@ function movieOption(e){
             initialPage("now_playing")
         }
         else{
-            searchMovie(movie)
+        searchMovie(movie)
         }
-        
         $("#search-box").attr("placeholder", movie.toUpperCase()).val(movie.toUpperCase())
     }
 
@@ -159,9 +157,11 @@ function displayHistoryButtons(){
 
 }
 
-$("#search-box").submit( movieOption)
-$("#search-button").on("click", movieOption)
-$("#append-history").on("click","#append-history-child", movieHistory)
+$("#search-box").submit( movieOption);
+$("#search-button").on("click", movieOption);
+$("#append-history").on("click","#append-history-child", movieHistory);
+setToLocal("upcoming");
+setToLocal("now playing");
 displayHistoryButtons();
 
     
