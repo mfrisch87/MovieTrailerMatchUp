@@ -99,15 +99,15 @@ function movieOption(e){
         .children()
         .text()
         .toLowerCase();
-        // if(movie == "upcoming"){
-        //     initialPage("upcoming")
-        // }
-        // else if(movie === "now playing"){
-        //     initialPage("now_playing")
-        // }
-        // else{
+        if(movie == "upcoming"){
+            initialPage("upcoming")
+        }
+        else if(movie === "now playing"){
+            initialPage("now_playing")
+        }
+        else{
         searchMovie(movie)
-        // }
+        }
         $("#search-box").attr("placeholder", movie.toUpperCase()).val(movie.toUpperCase())
     }
 
@@ -160,8 +160,8 @@ function displayHistoryButtons(){
 $("#search-box").submit( movieOption);
 $("#search-button").on("click", movieOption);
 $("#append-history").on("click","#append-history-child", movieHistory);
-// setToLocal("upcoming");
-// setToLocal("now playing");
+setToLocal("upcoming");
+setToLocal("now playing");
 displayHistoryButtons();
 
     

@@ -2,13 +2,13 @@
 //API Key Array
 ytAPIKeys ={ 
     yKeys:
-    "AIzaSyCkifdAmM0IIjs8znt7RH2_-_6o4xjOPYs"
+    "AIzaSyADtyGp19GrSaE4roaX6YHv_BTfM8YsfCI"
     ,
     mKey:'c2e8eb3c',
     uKey: 'a1dac165e8856d66a0687c69f3b83557'
 }
 
-//this gives you updates movies but youtube won't match the trailer for some reason
+//this gives you updates movies but youtube won't match the trailer for some 
 function initialPage(typeSearch) {
     
     var queryURL = "https://api.themoviedb.org/3/movie/"+typeSearch+"?api_key=" +ytAPIKeys.uKey+"&language=en-US&page=1&region=US";
@@ -35,7 +35,7 @@ function initialPage(typeSearch) {
 
 function formatedDate(date){
     var array = date.split("-");
-    return  array[1] +"/"+array[2] +"/"+ array[0]
+    return  array[0]
 }
 
 
