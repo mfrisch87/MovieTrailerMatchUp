@@ -41,7 +41,7 @@ function formatedYear(date){
 
 function formatedDate(date){
     var array = date.split("-");
-    return  "Released Date: "+ array[1]+"-"+array[2]+"-"+array[0]
+    return  "Release Date: "+ array[1]+"-"+array[2]+"-"+array[0]
 }
 
 
