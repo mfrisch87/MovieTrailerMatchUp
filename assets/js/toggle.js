@@ -22,21 +22,14 @@ function initialPage(typeSearch) {
     
         //The variable loops 8 times through search results and stores them in movieCollection array.
         for (var i = 0; i < response.results.length; i++){
-        
             movieCollection[i] ={ Title:response.results[i].title,
                                   Year:formatedDate(response.results[i].release_date),
                                   Poster:"https://image.tmdb.org/t/p/w220_and_h330_face/"+response.results[i].poster_path,
                                   Type:"Movie",  
-            }// What is this?
+            }
             console.log(movieCollection[i].Year)
             }
-            
-        //*passing movieCollection data into displayPosters function*
-        setToLocal("upcoming")
-        setToLocal("now playing")
         displayPosters(movieCollection);
-        displayHistoryButtons();
-
     });
 }
 
@@ -44,6 +37,6 @@ function formatedDate(date){
     var array = date.split("-");
     return  array[1] +"/"+array[2] +"/"+ array[0]
 }
-initialPage("upcoming");
+
 
 

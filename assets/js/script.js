@@ -15,7 +15,7 @@ $.ajax({
   
  //console.log(response);
  //console.log(trailerId);
-        // Youtube URL based on response
+// Youtube URL based on response
 var youTubeURL = "https://www.youtube.com/embed/" + trailerId
 
 //Appending URL result to modal

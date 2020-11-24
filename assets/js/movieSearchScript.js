@@ -20,8 +20,7 @@ function searchMovie(movie) {
 
     //The variable loops 8 times through search results and stores them in movieCollection array.
     for (var i = 0; i < 8; i++){
-    
-        movieCollection[i] = response.Search[i];// What is this?
+        movieCollection[i] = response.Search[i];
         }
 
         //setting successful search results into local storage and displaying posters and populating history.
@@ -58,7 +57,7 @@ function displayPosters (movieCollection) {
 
     var info = $("<h5>").addClass('title is-6').text("Title: "+movieCollection[i].Title);
     var type = $('<h6>').addClass('subtitle is-6 mb-0').text("Type: " +movieCollection[i].Type);
-    var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year: " +movieCollection[i].Year);
+    var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year/Date: " +movieCollection[i].Year);
        
         //Appending posterImage html to posterSection HTML and adding the three variables that define info type and year
     posterSection
@@ -159,9 +158,11 @@ function displayHistoryButtons(){
 
 }
 
-$("#search-box").submit( movieOption)
-$("#search-button").on("click", movieOption)
-$("#append-history").on("click","#append-history-child", movieHistory)
+$("#search-box").submit( movieOption);
+$("#search-button").on("click", movieOption);
+$("#append-history").on("click","#append-history-child", movieHistory);
+setToLocal("upcoming");
+setToLocal("now playing");
 displayHistoryButtons();
 
     
