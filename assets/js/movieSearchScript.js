@@ -57,7 +57,7 @@ function displayPosters (movieCollection) {
 
     var info = $("<h5>").addClass('title is-6').text("Title: "+movieCollection[i].Title);
     var type = $('<h6>').addClass('subtitle is-6 mb-0').text("Type: " +movieCollection[i].Type);
-    var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year/Date: " +movieCollection[i].Year);
+    var year = $('<h6>').addClass('subtitle is-6 mb-0').text("Year: " +movieCollection[i].Year);
        
         //Appending posterImage html to posterSection HTML and adding the three variables that define info type and year
     posterSection
@@ -99,16 +99,15 @@ function movieOption(e){
         .children()
         .text()
         .toLowerCase();
-        if(movie == "upcoming"){
-            initialPage("upcoming")
-        }
-        else if(movie === "now playing"){
-            initialPage("now_playing")
-        }
-        else{
-            searchMovie(movie)
-        }
-        
+        // if(movie == "upcoming"){
+        //     initialPage("upcoming")
+        // }
+        // else if(movie === "now playing"){
+        //     initialPage("now_playing")
+        // }
+        // else{
+        searchMovie(movie)
+        // }
         $("#search-box").attr("placeholder", movie.toUpperCase()).val(movie.toUpperCase())
     }
 
@@ -161,8 +160,8 @@ function displayHistoryButtons(){
 $("#search-box").submit( movieOption);
 $("#search-button").on("click", movieOption);
 $("#append-history").on("click","#append-history-child", movieHistory);
-setToLocal("upcoming");
-setToLocal("now playing");
+// setToLocal("upcoming");
+// setToLocal("now playing");
 displayHistoryButtons();
 
     

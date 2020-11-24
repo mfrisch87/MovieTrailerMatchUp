@@ -33,8 +33,9 @@ function activateModal(e) {
 
   e.preventDefault();
   console.log('hit')
-  console.log(e.target)
+  
   var movie = $(this).data('title').toLowerCase();
+  console.log(movie)
 
   trailerSearch(movie);
 }
