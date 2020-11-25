@@ -25,6 +25,7 @@ function searchMovie(movie) {
 
         //setting successful search results into local storage and displaying posters and populating history.
         setToLocal(movie);
+        $("#search-box").attr("placeholder", movie.toUpperCase()).val(movie.toUpperCase())
 
         //*passing movieCollection data into displayPosters function*
         displayPosters(movieCollection);
