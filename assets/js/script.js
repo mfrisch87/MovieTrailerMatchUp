@@ -13,7 +13,7 @@ $.ajax({
     }).then(function(response) {
  var trailerId = response.items[0].id.videoId;
   
- //console.log(response);
+ console.log(response);
  //console.log(trailerId);
 // Youtube URL based on response
 var youTubeURL = "https://www.youtube.com/embed/" + trailerId
