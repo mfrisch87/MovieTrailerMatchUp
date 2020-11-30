@@ -24,7 +24,7 @@ function initialPage(typeSearch) {
         for (var i = 0; i < response.results.length; i++){
             movieCollection[i] ={ Title:response.results[i].title,
                                   Year:formatedYear(response.results[i].release_date),
-                                  Poster:"https://image.tmdb.org/t/p/w220_and_h330_face/"+response.results[i].poster_path,
+                                  Poster:pickPoster("https://image.tmdb.org/t/p/w220_and_h330_face/"+response.results[i].poster_path),
                                   Type:"Movie",
                                   releaseDate:formatedDate(response.results[i].release_date)  
             }

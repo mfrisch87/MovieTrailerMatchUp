@@ -87,7 +87,7 @@ function getYear(release, year){
 // posts unavailable poster when no movie poster is available
 function pickPoster(poster){
     console.log(poster);
-    if(poster === "N/A"){
+    if((poster === "N/A")||("https://image.tmdb.org/t/p/w220_and_h330_face/null" == poster)){
         return "assets/images/NA-Poster.png"
     }
     return poster
@@ -119,6 +119,12 @@ function movieOption(e){
         }
         else if(movie === "now playing"){
             initialPage("now_playing")
+        }
+        else if(movie === "top rated"){
+            initialPage("top_rated")
+        }
+        else if(movie === "popular"){
+            initialPage("popular")
         }
         else{
         searchMovie(movie)
@@ -177,6 +183,9 @@ $("#search-button").on("click", movieOption);
 $("#append-history").on("click","#append-history-child", movieHistory);
 setToLocal("upcoming");
 setToLocal("now playing");
+setToLocal("top rated");
+setToLocal("popular");
+
 displayHistoryButtons();
 
     
